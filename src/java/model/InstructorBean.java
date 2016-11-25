@@ -10,11 +10,20 @@ import javax.faces.bean.SessionScoped;
 
 @SessionScoped
 @ManagedBean
-public class FlightInstructorBean extends PilotBean{
+public class InstructorBean extends PilotBean{
+    private boolean fliesAtSchool;
     private String bank;
     private String agency;
     private String account;
     private String cpf;
+
+    public boolean getFliesAtSchool() {
+        return fliesAtSchool;
+    }
+
+    public void setFliesAtSchool(boolean fliesAtSchool) {
+        this.fliesAtSchool = fliesAtSchool;
+    }
 
     public String getBank() {
         return bank;
