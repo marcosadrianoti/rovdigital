@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -13,6 +14,8 @@ import javax.faces.bean.SessionScoped;
 public class PilotBean {
     private String name;
     private String canac;
+    private int cmaClass;
+    private Date cmaValidity;
     private String email;
 
     public String getName() {
@@ -31,6 +34,22 @@ public class PilotBean {
         this.canac = canac;
     }
 
+    public int getCmaClass() {
+        return cmaClass;
+    }
+
+    public void setCmaClass(int cmaClass) {
+        this.cmaClass = cmaClass;
+    }
+
+    public Date getCmaValidity() {
+        return cmaValidity;
+    }
+
+    public void setCmaValidity(Date cmaValidity) {
+        this.cmaValidity = cmaValidity;
+    }
+    
     public String getEmail() {
         return email;
     }
@@ -38,6 +57,4 @@ public class PilotBean {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
 }

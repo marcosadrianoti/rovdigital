@@ -84,6 +84,4 @@ public class AircraftBean {
     public void setMaintenance(MaintenanceBean maintenance) {
         this.maintenance = maintenance;
     }
-    
-    
 }
