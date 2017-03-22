@@ -1,0 +1,66 @@
+#logo
+{
+    float: left;
+    height: 86px;
+    width : 175px;
+    background-color : #CCE7FF;
+}
+
+#title
+{
+    font-family: arial;
+    text-align:center;
+    margin-left:175px;
+    height: 86px;
+    background-color : #CCE7FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu
+{
+    top: 0%;
+    margin-top: 94px;
+    font-family: arial;
+    width: 175px;
+    position: absolute;
+    height: 100%;
+    background-color: #CCE7FF;
+}
+
+#content
+{
+    top: 0%;
+    margin-top: 94px;
+    margin-left: 175px;
+    font-family: arial;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.ui-menu
+{
+    width: 163px;
+    border: none;
+}
+
+.ui-menubar
+{
+    width: 160px !important;
+    margin-left: 90px;
+}
+
+.ui-menu-child
+{
+    width: 85px !important;
+    margin-left: 65px;
+}
+
+.ui-menubar,.ui-menu-child,.ui-menu {
+    background: #CCE7FF !important;
+    color: black !important;
+    font-size: 15px;
+}
