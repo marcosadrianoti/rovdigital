@@ -1,18 +1,18 @@
 #logo
 {
-    float: left;
     height: 86px;
     width : 175px;
     background-color : #CCE7FF;
+    float: left;
 }
 
 #title
 {
-    font-family: arial;
-    text-align:center;
-    margin-left:175px;
     height: 86px;
+    margin-left:175px;
+    font-family: arial;
     background-color : #CCE7FF;
+    text-align:center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,25 +20,25 @@
 
 #menu
 {
+    height: 100%;
+    width: 175px;
     top: 0%;
     margin-top: 94px;
     font-family: arial;
-    width: 175px;
-    position: absolute;
-    height: 100%;
     background-color: #CCE7FF;
+    position: absolute;
 }
 
 #content
 {
+    height: 100%;
     top: 0%;
     margin-top: 94px;
     margin-left: 175px;
     font-family: arial;
-    width: 100%;
-    position: absolute;
-    height: 100%;
     background-color: #ffffff;
+    position: absolute;
+    display: flex;
 }
 
 .ui-menu
@@ -59,7 +59,8 @@
     margin-left: 65px;
 }
 
-.ui-menubar,.ui-menu-child,.ui-menu {
+.ui-menubar,.ui-menu-child,.ui-menu 
+{
     background: #CCE7FF !important;
     color: black !important;
     font-size: 15px;

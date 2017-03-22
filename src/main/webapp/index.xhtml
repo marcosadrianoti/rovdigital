@@ -5,82 +5,83 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui"
-      >
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
     <h:head>
-        <title>TODO supply a title</title>
+        <title>ROVDigital PLA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="sistema.css" />
     </h:head>
+    
     <h:body>
-        <div id="logo">
-            <img src="img/logo-PLA.png" alt="PLA" width="175px" height="86px" align="center" padding="0px"/>
-        </div>
-        <div id="title">
-            <p><strong><font size="5">ROVDigital</font></strong><br/>Registro de Operações de Voo</p>
-        </div>
-        <div id="menu">
-            <h:form>
-                <br/>
-                <p align="center" style="margin: 0;"><font face="Arial" size="4"><strong>MENU</strong></font></p>
-                <p:menu class="ui-menu" toggleable="true"> 
-                    <p:submenu class="ui-menubar" label="Registros de Voo">
-                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Alunos">
-                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Instrutores">
-                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />               
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Aviões">
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Aerodrómos">
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" /> 
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Aulas">
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Manutenção">
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Relatórios">
-                        <p:menuitem class="ui-menu-child" value="Por Avião" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Pro Instrutor" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Por Aluno" actionListener="#{menuView.save}" />
-                    </p:submenu>
-                    <p:submenu class="ui-menubar" label="Usuários">
-                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
-                        <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                 
-                    </p:submenu>
-                </p:menu>
-            </h:form>
-        </div>
-        <div id="content">
-            <p>Apenas um teste</p>
-            <p:fieldset legend="Dados" style="margin-bottom:20px">
-                <p:outputLabel value="Nome"/><br/>
-                <p:inputText/>
-            </p:fieldset>
-        </div>
+            <div id="logo">
+                <img src="img/logo-PLA.png" alt="PLA" width="175px" height="86px" align="center" padding="0px"/>
+            </div>
+            <div id="title">
+                <p><strong><font size="5">ROVDigital</font></strong><br/>Registro de Operações de Voo</p>
+            </div>
+            <div id="menu">
+                <h:form>
+                    <br/>
+                    <p align="center" style="margin: 0;"><font face="Arial" size="4"><strong>MENU</strong></font></p>
+                    <p:menu class="ui-menu" toggleable="true"> 
+                        <p:submenu class="ui-menubar" label="Registros de Voo">
+                            <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{helloBean.setName('ViewAllRecords.xhtml')}" update="panelmain" />
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{helloBean.setName('NewRecord.xhtml')}" update="panelmain"  />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Alunos">
+                            <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Instrutores">
+                            <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />               
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Aviões">
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Aerodrómos">
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" /> 
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Aulas">
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Manutenção">
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Relatórios">
+                            <p:menuitem class="ui-menu-child" value="Por Avião" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Pro Instrutor" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Por Aluno" actionListener="#{menuView.save}" />
+                        </p:submenu>
+                        <p:submenu class="ui-menubar" label="Usuários">
+                            <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
+                            <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                 
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+            </div>
+            <div id="content">
+                <p:panel id="panelmain" style="border:none">
+                    <ui:include src="#{helloBean.name}"/>
+                </p:panel>
+            </div>
     </h:body>
+    
 </html>
