@@ -1,3 +1,8 @@
+    /*
+    Troca o nome da página xhtml que será mostrada
+    na div de conteúdo central.
+    */
+
 package br.com.ciacpla.rovdigital.bean;
 
 import javax.faces.bean.ManagedBean;
@@ -6,7 +11,7 @@ import java.io.Serializable;
 
 @ManagedBean
 @RequestScoped
-public class helloBean implements Serializable {
+public class swapContentBean implements Serializable {
 
     /*private static final long serialVersionUID = 1L;*/
 

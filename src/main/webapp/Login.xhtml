@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+>
+
+    <h:head>
+        <title>Escola PLA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+    </h:head>
+
+    <h:body>
+
+        <div id="login">
+
+            <panel>
+
+                <h:panelGrid columns="1" id="loginGrid" cellpadding="0" style="text-align: left" cellspacing="0px">    
+                    <p style="text-align: center">
+                        <img src="img/logo-PLA.png" alt="PLA" width="210px" height="103px" align="center" />
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <font size="6">ROVDigital</font>
+                    </p>
+                    <h:outputLabel for="user" value="Usuário" />
+                    <p:inputText id="user"/>
+                    <br/>
+                    <br/>
+                    <h:outputLabel for="pwd" value="Senha" />
+                    <p:password id="pwd" value="" label="Password" required="true" />
+                    <br/>
+
+                </h:panelGrid>
+
+                <p:commandButton  update="" value="Entrar" />
+
+            </panel>
+
+        </div>
+
+    </h:body>
+
+</html>
