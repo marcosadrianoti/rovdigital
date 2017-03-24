@@ -6,17 +6,38 @@
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:p="http://primefaces.org/ui"
->
-    
+    >
+
     <h:head>
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/Styles.css" />
     </h:head>
     <h:body>
-        <p>Ver todos os Registros</p>
-        <p:fieldset legend="TESTE">
-            <p:calendar showOn="button"/>
+        <!--<div id="ViewOnlyOneRecord">-->
+        <p:fieldset id="Record" legend="Qual avião" toggleable="true" toggleSpeed="500">
+            <p:ajax event="toggle"  />
+            <p:fieldset id="LogBook" legend="Diário" >
+                <!--<h:panelGrid columns="2" cellpadding="0" style="text-align: left" cellspacing="0px" border="1">-->
+                <table cellspacing="10" style="font-size: 15px;">
+                    <tr>
+                        <td >
+                            <h:outputLabel for="Number" value="Número" /><br/>
+                            <p:inputText id="Number" size="10"/>
+                        </td>
+                        <td >
+                            <h:outputLabel for="Page" value="Página" /><br/>
+                            <p:inputText id="Page" size="5"/>
+                        </td>
+                    </tr>
+                </table>
+                <!--</h:panelGrid>-->
+            </p:fieldset>
+
         </p:fieldset>
+        <!--</div>-->
+        <div id="ViewAllRecords">
+
+        </div>
     </h:body>
 </html>

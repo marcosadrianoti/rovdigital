@@ -1,21 +1,21 @@
-#logo
+#ViewOnlyOneRecord
 {
-    height: 86px;
-    width : 175px;
-    background-color : #CCE7FF;
-    float: left;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 1000px;
+    font-family: arial;
+    background-color : #00E7FF;
+    position: absolute;
+    display: flex;
 }
 
-#title
+#Record .ui-fieldset-legend
 {
-    height: 86px;
-    margin-left:175px;
     font-family: arial;
-    background-color : #CCE7FF;
-    text-align:center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 15px;
+    background-color : transparent;
+    border-color: transparent;
 }
 
 #login
