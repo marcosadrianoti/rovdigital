@@ -9,35 +9,206 @@
     >
 
     <h:head>
-        <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/Styles.css" />
     </h:head>
     <h:body>
-        <!--<div id="ViewOnlyOneRecord">-->
-        <p:fieldset id="Record" legend="Qual avião" toggleable="true" toggleSpeed="500">
-            <p:ajax event="toggle"  />
-            <p:fieldset id="LogBook" legend="Diário" >
-                <!--<h:panelGrid columns="2" cellpadding="0" style="text-align: left" cellspacing="0px" border="1">-->
-                <table cellspacing="10" style="font-size: 15px;">
-                    <tr>
-                        <td >
-                            <h:outputLabel for="Number" value="Número" /><br/>
-                            <p:inputText id="Number" size="10"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="Page" value="Página" /><br/>
-                            <p:inputText id="Page" size="5"/>
-                        </td>
-                    </tr>
-                </table>
-                <!--</h:panelGrid>-->
+        <div id="ViewOneRecord">
+            <p:fieldset id="Record" legend="PT-NSV" toggleable="true" toggleSpeed="500"  collapsed="true">
+                <p:ajax event="toggle"  />
+                <p:fieldset id="LogBook" legend="Diário" >
+                    <table cellspacing="10" style="font-size: 15px;">
+                        <tr><!--Linha 1-->
+                            <td >
+                                <h:outputLabel for="Number" value="Número" /><br/>
+                                <p:inputText id="Number" size="10"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="Page" value="Página" /><br/>
+                                <p:inputText id="Page" size="5"/>
+                            </td>
+                        </tr>
+                        <tr> <!--Linha 2-->
+                            <td ><!--Colunas-->
+                                <h:outputLabel for="DateLog" value="Data" /><br/>
+                                <p:inputMask id="DateLog" mask="99/99/9999" size="10"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="From" value="De" /><br/>
+                                <p:inputText id="From" size="5"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="To" value="Para" /><br/>
+                                <p:inputText id="To" size="5"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="StartTimeLog" value="Partida" /><br/>
+                                <p:inputText id="StartTimeLog" size="5"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="FinalTimeLog" value="Corte" /><br/>
+                                <p:inputText id="FinalTimeLog" size="5"/>
+                            </td>
+                            <td>
+                                <p:fieldset id="TotalLog" legend="Total">
+                                    <table cellspacing="10">
+                                        <td>
+                                            <h:outputLabel for="TotalTimeLog" value="Relógio" /><br/>
+                                            <p:inputText id="TotalTimeLog" size="5"/>
+                                        </td>
+                                        <td>
+                                            <h:outputLabel for="TotalTacLog" value="Tac" /><br/>
+                                            <p:inputText id="TotalTacLog" size="5"/>
+                                        </td>
+                                    </table>
+                                </p:fieldset>
+                            </td>
+                            <td >
+                                <h:outputLabel for="LandingsLog" value="Pousos" /><br/>
+                                <p:inputText id="LandingsLog" size="2"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="NatLog" value="Nat" /><br/>
+                                <p:inputText id="NatLog" size="2"/>
+                            </td>
+                        </tr>
+                        <tr><!--Linha 3-->
+                            <td >
+                                <h:outputLabel for="Pilot1Log" value="Piloto 1" /><br/>
+                                <p:inputText id="Pilot1Log" size="10"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="Pilot2Log" value="Piloto 2" /><br/>
+                                <p:inputText id="Pilot2Log" size="5"/>
+                            </td>
+                            <td colspan="4">
+                                <h:outputLabel for="ObsLog" value="Obs" /><br/>
+                                <p:inputText id="ObsLog" size="60"/>
+                            </td>
+                            <td colspan="2">
+                                <h:outputLabel for="VerifiedLog" value="Verificado Por" /><br/>
+                                <p:inputText id="VerifiedLog" size="10"/>
+                            </td>
+                        </tr>
+                    </table>
+                </p:fieldset>
+                <br/>
+
+                <p:fieldset id="Rod" legend="ROD" >
+                    <table cellspacing="10" style="font-size: 15px;">
+                        <tr> <!--Linha 1-->
+                            <td ><!--Colunas-->
+                                <h:outputLabel for="DateRod" value="Data" /><br/>
+                                <p:inputMask id="DateRod" mask="99/99/9999" size="10"/>
+                            </td>
+                            <td >
+                                <p:fieldset id="TimeRod" legend="Relógio">
+                                    <table cellspacing="10">
+                                        <td>
+                                            <h:outputLabel for="StartTimeRod" value="Partida" /><br/>
+                                            <p:inputText id="StartTimeRod" size="5"/>
+                                        </td>
+                                        <td>
+                                            <h:outputLabel for="FinalTimeRod" value="Corte" /><br/>
+                                            <p:inputText id="FinalTimeRod" size="5"/>
+                                        </td>
+                                        <td>
+                                            <h:outputLabel for="TotalTimeRod" value="Total" /><br/>
+                                            <p:inputText id="TotalTimeRod" size="5"/>
+                                        </td>
+                                    </table>
+                                </p:fieldset>
+                            </td>
+                            <td >
+                                <p:fieldset id="TacRod" legend="Tac">
+                                    <table cellspacing="10">
+                                        <td>
+                                            <h:outputLabel for="StartTacRod" value="Partida" /><br/>
+                                            <p:inputText id="StartTacRod" size="5"/>
+                                        </td>
+                                        <td>
+                                            <h:outputLabel for="FinalTacRod" value="Corte" /><br/>
+                                            <p:inputText id="FinalTacRod" size="5"/>
+                                        </td>
+                                        <td>
+                                            <h:outputLabel for="TotalTacRod" value="Total" /><br/>
+                                            <p:inputText id="TotalTacRod" size="5"/>
+                                        </td>
+                                    </table>
+                                </p:fieldset>
+                            </td>
+                            <td >
+                                <h:outputLabel for="LandingsRod" value="Pousos" /><br/>
+                                <p:inputText id="LandingsRod" size="2"/>
+                            </td>
+                            <td >
+                                <h:outputLabel for="NatRod" value="Nat" /><br/>
+                                <p:inputText id="NatRod" size="2"/>
+                            </td>
+                        </tr>
+                        <table cellspacing="10" style="font-size: 15px;">
+                            <tr><!--Linha 2-->
+                                <td >
+                                    <h:outputLabel for="Pilot1Rod" value="Piloto 1" /><br/>
+                                    <p:inputText id="Pilot1Rod" size="10"/>
+                                </td>
+                                <td >
+                                    <h:outputLabel for="Pilot2Rod" value="Piloto 2" /><br/>
+                                    <p:inputText id="Pilot2Rod" size="5"/>
+                                </td>
+                                <td colspan="1">
+                                    <h:outputLabel for="ObsRod" value="Obs" /><br/>
+                                    <p:inputText id="ObsRod" size="60"/>
+                                </td>
+                                <td colspan="2">
+                                    <h:outputLabel for="VerifiedRod" value="Verificado Por" /><br/>
+                                    <p:inputText id="VerifiedRod" size="10"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </table>
+                </p:fieldset>
             </p:fieldset>
-
-        </p:fieldset>
-        <!--</div>-->
+        </div>
+            <br/>
         <div id="ViewAllRecords">
+            <p:dataTable var="sale" value="">
 
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column colspan="2" rowspan="2" style="background-color: transparent; border-left-color: transparent; border-top-color: transparent; " />
+                        <p:column colspan="4" headerText="Diário" style="background-color: transparent;" />
+                        <p:column colspan="6" headerText="Rod" style="background-color: transparent;" />
+                    </p:row>
+                    <p:row>
+
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="" headerText="TAC" />
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="3" headerText="TAC" />
+                        <p:column colspan="5" headerText="Dados" />
+                    </p:row>
+                    <p:row>
+                        <p:column headerText="Data" />
+                        <p:column headerText="Avião" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="P" />
+                        <p:column headerText="Missão" />
+                        <p:column headerText="Piloto 1" />
+                        <p:column headerText="Piloto 2" />
+                        <p:column headerText="Obs" />
+                    </p:row>
+                </p:columnGroup>
+            </p:dataTable>
         </div>
     </h:body>
 </html>
