@@ -1,7 +1,7 @@
 
 #Record
 {
-    width: 7%;
+    width: 60%;
 }
 
 #Record .ui-fieldset-legend
@@ -14,7 +14,20 @@
     border-color: #000000;
     position: relative;
 }
-#LogBook .ui-fieldset-legend
+
+#LogBook  .ui-fieldset-legend
+{
+    line-height: 10%;
+    height: 5px;
+    margin-top: -15px;
+    font-family: arial;
+    font-size: 15px;
+    background-color : #ffffff;
+    border-color: transparent;
+    position: absolute;
+}
+
+#Rod .ui-fieldset-legend
 {
     line-height: 10%;
     height: 5px;

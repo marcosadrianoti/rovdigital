@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    >
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+    </h:head>
+    <h:body>
+        <div id="ViewOneRecord">
+            <p:fieldset id="Record" legend="Aluno" toggleable="true" toggleSpeed="500"  collapsed="true">
+                <p:ajax event="toggle"  />
+                <p:fieldset id="Datas" legend="Dados" style="width: 2%">
+                    <table cellspacing="10" style="font-size: 15px; width: 100">
+                        <tr><!--Linha 1-->
+
+                            <td width="2">
+                                <h:outputLabel for="Registration" value="Matrícula" /><br/>
+                                <p:inputText id="Registration" size="7"/>
+                            </td>
+
+                            <td width="2%" colspan="4" >
+                                <h:outputLabel for="Name" value="Nome" /><br/>
+                                <p:inputText id="Name" size="40"/>
+                            </td>
+                            <td width="2">
+                                <h:outputLabel for="Page" value="Anac" /><br/>
+                                <p:inputText id="Anac" size="5"/>
+                            </td>
+                            <td rowspan="2">
+                                <p:fieldset id="Cma" legend="CMA" style="width: 2%">
+                                    <h:panelGrid columns="2" style="margin-bottom:10px; margin-top:0;"  cellpadding="5">
+                                        <p:outputLabel for="Classe" value="Classe:" />
+                                        <p:selectOneRadio id="Classe" value="#{radioView.console}" layout="grid" columns="1">
+                                            <f:selectItem itemLabel="Primeira" itemValue="1" /><br/>
+                                            <f:selectItem itemLabel="Segunda" itemValue="2" />
+                                        </p:selectOneRadio>
+                                        <h:outputLabel for="Validity" value="Validade:  " />
+                                        <p:inputText id="Validity" size="5"/>
+                                    </h:panelGrid>
+                                </p:fieldset>
+                            </td>
+                        </tr>
+                        <tr> <!--Linha 2-->
+                            <td width="2%" colspan="2"><!--Colunas-->
+                                <h:outputLabel for="Email" value="Email" /><br/>
+                                <p:inputText id="Email" size="20"/>
+                            </td>
+                            <td width="2">
+                                <h:outputLabel for="Phone" value="Fone/Whatsapp" /><br/>
+                                <p:inputText id="Phone" size="10"/>
+                            </td>
+                            <td width="2">
+                                <h:outputLabel for="Cpf" value="Cpf" /><br/>
+                                <p:inputText id="Cpf" size="10"/>
+                            </td>
+                        </tr>
+                    </table>
+                </p:fieldset>
+
+                <br/>
+
+                <!--<p:fieldset id="Rod" legend="ROD" >-->
+                <table cellspacing="10" style="font-size: 15px;">
+                    <tr> <!--Linha 1-->
+                        <td >
+                            <p:fieldset id="Licenses" legend="Licenças">
+                                <table cellspacing="10">
+                                    <td>
+                                        <h:outputLabel for="PP" value="PP" /><br/>
+                                        <p:inputText id="PP" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="PC" value="PC" /><br/>
+                                        <p:inputText id="PC" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="PLA" value="PLA" /><br/>
+                                        <p:inputText id="PLA" size="5"/>
+                                    </td>
+                                </table>
+                            </p:fieldset>
+                        </td>
+                        <td >
+                            <p:fieldset id="Qualifications" legend="Habilitações">
+                                <table cellspacing="10">
+                                    <td>
+                                        <h:outputLabel for="MNTE" value="MNTE" /><br/>
+                                        <p:inputText id="MNTE" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="MLTE" value="MLTE" /><br/>
+                                        <p:inputText id="MLTE" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="IFRA" value="IFRA" /><br/>
+                                        <p:inputText id="IFRA" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="INVA" value="INVA" /><br/>
+                                        <p:inputText id="INVA" size="5"/>
+                                    </td>
+                                </table>
+                            </p:fieldset>
+                            <td>
+                                <p:fieldset id="CurrentBalance" legend="Saldo de Horas">
+                                    <table cellspacing="10">
+                                        <td>
+                                            <h:outputLabel for="MNTEBalance" value="MNTE" /><br/>
+                                            <p:inputText id="MNTEBalance" size="2"/>
+                                        </td>
+                                        <td >
+                                            <h:outputLabel for="MLTEBalance" value="MLTE" /><br/>
+                                            <p:inputText id="MLTEBalance" size="2"/>
+                                        </td>
+                                    </table>
+                                </p:fieldset>
+                            </td>
+                        </td>
+                    </tr>
+                </table>
+                <!--</p:fieldset>-->
+            </p:fieldset>
+        </div>
+        <br/>
+        <div id="ViewAllRecords">
+            <p:dataTable var="sale" value="">
+
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column colspan="2" rowspan="2" style="background-color: transparent; border-left-color: transparent; border-top-color: transparent; " />
+                        <p:column colspan="4" headerText="Diário" style="background-color: transparent;" />
+                        <p:column colspan="6" headerText="Rod" style="background-color: transparent;" />
+                    </p:row>
+                    <p:row>
+
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="" headerText="TAC" />
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="3" headerText="TAC" />
+                        <p:column colspan="5" headerText="Dados" />
+                    </p:row>
+                    <p:row>
+                        <p:column headerText="Data" />
+                        <p:column headerText="Avião" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="P" />
+                        <p:column headerText="Missão" />
+                        <p:column headerText="Piloto 1" />
+                        <p:column headerText="Piloto 2" />
+                        <p:column headerText="Obs" />
+                    </p:row>
+                </p:columnGroup>
+            </p:dataTable>
+        </div>
+    </h:body>
+</html>

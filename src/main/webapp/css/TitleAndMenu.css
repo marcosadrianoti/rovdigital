@@ -21,7 +21,7 @@
 #menu
 {
     height: 100%;
-    width: 175px;
+    width: 250px !important;
     top: 0%;
     margin-top: 94px;
     font-family: arial;
@@ -34,7 +34,7 @@
     height: 100%;
     top: 0%;
     margin-top: 94px;
-    margin-left: 175px;
+    margin-left: 250px;
     font-family: arial;
     background-color: #ffffff;
     position: absolute;
@@ -44,7 +44,7 @@
 .ui-menu
 {
     width: 163px;
-    border: none;
+    border: none !important;
 }
 
 .ui-menubar
