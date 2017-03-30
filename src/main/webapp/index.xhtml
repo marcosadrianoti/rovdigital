@@ -45,7 +45,7 @@
                         <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
                     </p:submenu>
                     <p:submenu class="ui-menubar" label="Instrutores">
-                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{menuView.save}" />
+                        <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{swapContentBean.setName('ViewAllInstructors.xhtml')}" update="panelmain" />
                         <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />

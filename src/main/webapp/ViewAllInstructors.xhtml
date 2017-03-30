@@ -14,41 +14,45 @@
     </h:head>
     <h:body>
         <div id="ViewOneRecord">
-            <p:fieldset id="Record" legend="Aluno" toggleable="true" toggleSpeed="500"  collapsed="true">
+            <p:fieldset id="Record" legend="Instrutor" toggleable="true" toggleSpeed="500"  collapsed="true">
                 <p:ajax event="toggle"  />
                 <p:fieldset id="Datas" legend="Dados" style="width: 2%">
-                    <table cellspacing="10" style="font-size: 15px; width: 100">
+                    <table cellspacing="10" style="font-size: 15px; width: 100;">
                         <tr><!--Linha 1-->
 
-                            <td width="2">
-                                <h:outputLabel for="Registration" value="Matrícula" /><br/>
-                                <p:inputText id="Registration" size="7"/>
-                            </td>
-
-                            <td width="2%" colspan="4" >
+                            <td width="2%" colspan="2" >
                                 <h:outputLabel for="Name" value="Nome" /><br/>
                                 <p:inputText id="Name" size="40"/>
                             </td>
-                            <td width="2">
-                                <h:outputLabel for="Page" value="Anac" /><br/>
+                            <td width="2" >
+                                <h:outputLabel for="Anac" value="Anac" /><br/>
                                 <p:inputText id="Anac" size="5"/>
                             </td>
-                            <td rowspan="2">
-                                <p:fieldset id="Cma" legend="CMA" style="width: 2%">
-                                    <h:panelGrid columns="2" style="margin-bottom:10px; margin-top:0;"  cellpadding="5">
-                                        <p:outputLabel for="Classe" value="Classe:" />
-                                        <p:selectOneRadio id="Classe" value="#{radioView.console}" layout="grid" columns="1">
-                                            <f:selectItem itemLabel="Primeira" itemValue="1" /><br/>
-                                            <f:selectItem itemLabel="Segunda" itemValue="2" />
-                                        </p:selectOneRadio>
-                                        <h:outputLabel for="Validity" value="Validade:  " />
-                                        <p:inputText id="Validity" size="5"/>
+                            <td width="2" colspan="2">
+                                <h:outputLabel for="ValidityCMA" value="Validade CMA" /><br/>
+                                <p:inputText id="ValidityCMA" size="7"/>
+                            </td>
+                            <td rowspan="6">
+                                <p:fieldset id="Cma" legend="Banco" style="width: 2%">
+                                    <h:panelGrid columns="1" style="margin-bottom:0; margin-top:0;"  cellpadding="1">
+                                        <td width="2">
+                                            <h:outputLabel for="BankName" value="Nome" />
+                                            <p:inputText id="BankName" size="10"/>
+                                        </td>
+                                        <td width="2">
+                                            <h:outputLabel for="Agency" value="Agência" />
+                                            <p:inputText id="Agency" size="10"/>
+                                        </td>
+                                        <td width="2">
+                                            <h:outputLabel for="Acount" value="Conta" />
+                                            <p:inputText id="Acount" size="10"/>
+                                        </td>
                                     </h:panelGrid>
                                 </p:fieldset>
                             </td>
                         </tr>
                         <tr> <!--Linha 2-->
-                            <td width="2%" colspan="2"><!--Colunas-->
+                            <td width="2%" ><!--Colunas-->
                                 <h:outputLabel for="Email" value="Email" /><br/>
                                 <p:inputText id="Email" size="20"/>
                             </td>
@@ -56,9 +60,17 @@
                                 <h:outputLabel for="Phone" value="Fone/Whatsapp" /><br/>
                                 <p:inputText id="Phone" size="10"/>
                             </td>
-                            <td width="2">
+                            <td width="2" colspan="2">
                                 <h:outputLabel for="Cpf" value="Cpf" /><br/>
                                 <p:inputText id="Cpf" size="10"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                                    <p:selectBooleanCheckbox  value="#{selectBooleanView.value1}" />
+                                    <h:outputText value="Voa na Escola PLA" />
+                                </h:panelGrid>
                             </td>
                         </tr>
                     </table>
@@ -108,20 +120,6 @@
                                     </td>
                                 </table>
                             </p:fieldset>
-                            <td>
-                                <p:fieldset id="CurrentBalance" legend="Saldo de Horas">
-                                    <table cellspacing="10">
-                                        <td>
-                                            <h:outputLabel for="MNTEBalance" value="MNTE" /><br/>
-                                            <p:inputText id="MNTEBalance" size="2"/>
-                                        </td>
-                                        <td >
-                                            <h:outputLabel for="MLTEBalance" value="MLTE" /><br/>
-                                            <p:inputText id="MLTEBalance" size="2"/>
-                                        </td>
-                                    </table>
-                                </p:fieldset>
-                            </td>
                         </td>
                     </tr>
                 </table>
@@ -134,20 +132,23 @@
 
                 <p:columnGroup type="header">
                     <p:row>
-                        <p:column colspan="14" headerText="ALUNOS" style="background-color: transparent;"/>
+                        <p:column colspan="16 " headerText="INSTRUTORES" style="background-color: transparent;"/>
                     </p:row>
                     <p:row >
-                        <p:column colspan="3" headerText="Dados"  />
-                        <p:column colspan="2" headerText="Cma"  />
+                        <p:column colspan="7" headerText="Dados"  />
+                        <p:column colspan="1" headerText="Cma"  />
                         <p:column colspan="3" headerText="Licenças"  />
                         <p:column colspan="4" headerText="Habilitações"  />
-                        <p:column colspan="2" headerText="Saldo Horas"  />
+                        <p:column rowspan="2" headerText="Voa PLA"  />
                     </p:row>
                     <p:row style="font-size: 15px; background-color: #F7F7F7">
                         <p:column headerText="Nome" />
                         <p:column headerText="Anac" />
                         <p:column headerText="Email" />
-                        <p:column headerText="Classe" />
+                        <p:column headerText="CPF" />
+                        <p:column headerText="Banco" />
+                        <p:column headerText="Agência" />
+                        <p:column headerText="Conta" />
                         <p:column headerText="Validade" />
                         <p:column headerText="PP" />
                         <p:column headerText="PC" />
@@ -156,8 +157,6 @@
                         <p:column headerText="MLTE" />
                         <p:column headerText="IFRA" />
                         <p:column headerText="INVA" />
-                        <p:column headerText="MNTE" />
-                        <p:column headerText="MLTE" />
                     </p:row>
                 </p:columnGroup>
             </p:dataTable>
