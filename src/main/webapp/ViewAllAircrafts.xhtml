@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    >
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+    </h:head>
+    <h:body>
+        <div id="ViewOneRecord">
+            <p:fieldset id="Record" legend="Avião" toggleable="true" toggleSpeed="500"  collapsed="true">
+                <p:ajax event="toggle"  />
+                <p:fieldset id="Datas" legend="Dados" style="width: 2%">
+                    <table cellspacing="6" style="font-size: 15px;">
+                        <tr><!--Linha 1-->
+                            <td width="2%"  >
+                                <h:outputLabel for="IcaoRegistry" value="Marca" /><br/>
+                                <p:inputText id="IcaoRegistry" size="7"/>
+                            </td>
+                            <td width="2" >
+                                <h:outputLabel for="Manufacturer" value="Fabricante" /><br/>
+                                <p:inputText id="Manufacturer" size="7"/>
+                            </td>
+                            <td width="2" >
+                                <h:outputLabel for="Model" value="Modelo" /><br/>
+                                <p:inputText id="Model" size="7"/>
+                            </td>
+                            <td width="2" >
+                                <h:outputLabel for="Year" value="Ano" /><br/>
+                                <p:inputText id="Year" size="7"/>
+                            </td>
+                            <td width="2" >
+                                <h:outputLabel for="Serial" value="Serial" /><br/>
+                                <p:inputText id="Serial" size="7"/>
+                            </td>
+                            <td width="2" >
+                                <h:outputLabel for="Category" value="Classe" /><br/>
+                                <p:inputText id="Category" size="7"/>
+                            </td>
+                        </tr>
+                    </table>
+                </p:fieldset>
+                <br/>
+                <table cellspacing="10" style="font-size: 15px;">
+                    <tr> <!--Linha 1-->
+                        <td >
+                            <p:fieldset id="TSN" legend="TSN">
+                                <table cellspacing="10">
+                                    <td>
+                                        <h:outputLabel for="Airframe" value="Célula" /><br/>
+                                        <p:inputText id="Airframe" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="Powerplant" value="Motor" /><br/>
+                                        <p:inputText id="Powerplant" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="Propeller" value="Hélice" /><br/>
+                                        <p:inputText id="Propeller" size="5"/>
+                                    </td>
+                                </table>
+                            </p:fieldset>
+                        </td>
+                        <td >
+                            <p:fieldset id="Maintenance" legend="Manutenção">
+                                <table cellspacing="10">
+                                    <td>
+                                        <h:outputLabel for="IAM" value="IAM" /><br/>
+                                        <p:inputText id="IAM" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="Next" value="Próxima" /><br/>
+                                        <p:inputText id="Next" size="5"/>
+                                    </td>
+                                    <td>
+                                        <h:outputLabel for="AvailableTime" value="Disponível" /><br/>
+                                        <p:inputText id="AvailableTime" size="5"/>
+                                    </td>
+                                </table>
+                            </p:fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </p:fieldset>
+        </div>
+        <br/>
+        <div id="ViewAllRecords">
+            <p:dataTable var="sale" value="">
+
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column colspan="12" headerText="AVIÕES" style="background-color: transparent;"/>
+                    </p:row>
+                    <p:row >
+                        <p:column colspan="6" headerText="Dados"  />
+                        <p:column colspan="3" headerText="TSN"  />
+                        <p:column colspan="3" headerText="Manutenção"  />
+                    </p:row>
+                    <p:row style="font-size: 15px; background-color: #F7F7F7">
+                        <p:column headerText="Marca"  />
+                        <p:column headerText="Fabric."  />
+                        <p:column headerText="Modelo"  />
+                        <p:column headerText="Ano"  />
+                        <p:column headerText="Serial"  />
+                        <p:column headerText="Classe"  />
+                        <p:column headerText="Célula"  />
+                        <p:column headerText="Motor"  />
+                        <p:column headerText="Hélice"  />
+                        <p:column headerText="IAM"  />
+                        <p:column headerText="Próxima"  />
+                        <p:column headerText="Disponível"  />
+                    </p:row>
+                </p:columnGroup>
+            </p:dataTable>
+        </div>
+    </h:body>
+</html>

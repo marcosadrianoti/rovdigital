@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    >
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+    </h:head>
+    <h:body>
+        <div id="SetFilter">
+            <p:fieldset id="AircraftReport" legend="Por Avião" >
+                <p:fieldset id="Periodo" legend="Período" >
+                    <table cellspacing="10" style="font-size: 15px;">
+                        <tr><!--Linha 1-->
+                            <td >
+                                <p:outputLabel for="From" value="De" /><br/>
+                                <p:calendar id="From" value="#{calendarView.date2}" />
+                            </td>
+                            <td>
+                                <p:outputLabel for="Until" value="Até" /><br/>
+                                <p:calendar id="Until" value="#{calendarView.date2}" />
+                            </td>
+                            <td  style="vertical-align: bottom;">
+                                <p:commandButton value="Procurar" id="Search" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                            </td>
+                            <td style="vertical-align: bottom;">
+                                <p:commandButton value="Limpar" id="Clean" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                            </td>
+                        </tr>
+                    </table>
+                </p:fieldset>
+            </p:fieldset>
+        </div>
+        <br/>
+        <div id="ViewAllRecords">
+            <p:dataTable var="sale" value="">
+
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column colspan="2" rowspan="2" style="background-color: transparent; border-left-color: transparent; border-top-color: transparent; " />
+                        <p:column colspan="4" headerText="Diário" style="background-color: transparent;" />
+                        <p:column colspan="6" headerText="Rod" style="background-color: transparent;" />
+                    </p:row>
+                    <p:row>
+
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="" headerText="TAC" />
+                        <p:column colspan="3" headerText="Relógio" />
+                        <p:column colspan="3" headerText="TAC" />
+                        <p:column colspan="5" headerText="Dados" />
+                    </p:row>
+                    <p:row style="font-size: 15px; background-color: #F7F7F7">
+                        <p:column headerText="Data" />
+                        <p:column headerText="Avião" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="Partida" />
+                        <p:column headerText="Corte" />
+                        <p:column headerText="Total" />
+                        <p:column headerText="P" />
+                        <p:column headerText="Missão" />
+                        <p:column headerText="Inva" />
+                        <p:column headerText="Piloto" />
+                        <p:column headerText="Obs" />
+                    </p:row>
+                </p:columnGroup>
+            </p:dataTable>
+        </div>
+    </h:body>
+</html>

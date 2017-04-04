@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    >
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+    </h:head>
+    <h:body>
+        <div id="ViewAllRecords">
+            <p:dataTable var="sale" value="" style="width: 50%">
+
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column colspan="3" headerText="AERÓDROMOS" style="background-color: transparent;"/>
+                    </p:row>
+                    <p:row >
+                        <p:column colspan="3" headerText="Dados"  />
+                    </p:row>
+                    <p:row style="font-size: 15px; background-color: #F7F7F7">
+                        <p:column width="10" headerText="Código"  />
+                        <p:column width="10" headerText="Cidade"  />
+                        <p:column width="10" headerText="Estado"  />
+                    </p:row>
+                </p:columnGroup>
+            </p:dataTable>
+        </div>
+    </h:body>
+</html>
