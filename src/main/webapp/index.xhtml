@@ -7,7 +7,7 @@
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:p="http://primefaces.org/ui"
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
->
+    >
 
     <h:head>
         <title>ROVDigital PLA</title>
@@ -24,7 +24,7 @@
         <div id="title">
             <p><strong><font size="5">ROVDigital</font></strong><br/>Registro de Operações de Voo</p>
         </div>
-        <!-- Div com o menu lateral esquerdo-->
+        <!-- Div com o menu lateral esquerdo onclick="PF('dlgNewRecord').show();"-->
         <div id="menu">
             <h:form>
                 <br/>
@@ -32,7 +32,7 @@
                 <p:menu class="ui-menu" toggleable="true"> 
                     <p:submenu class="ui-menubar" label="Registros de Voo">
                         <p:menuitem class="ui-menu-child" value="Exibir Todos" actionListener="#{swapContentBean.setName('ViewAllRecords.xhtml')}" update="panelmain" />
-                        <p:menuitem class="ui-menu-child" value="Novo" actionListener="#{swapContentBean.setName('NewRecord.xhtml')}" update="panelmain"  />
+                        <p:menuitem class="ui-menu-child" value="Novo" onclick="PF('dlgNewRecord').show();" />
                         <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />
@@ -82,6 +82,9 @@
                         <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                 
                     </p:submenu>
                 </p:menu>
+                <p:dialog header="Registro de Voo" widgetVar="dlgNewRecord" modal="true">
+                    <ui:include src="NewRecordModal.xhtml"/>
+                </p:dialog>
             </h:form>
         </div>
         <!-- Div central que vai mostrar os vários conteúdos-->
