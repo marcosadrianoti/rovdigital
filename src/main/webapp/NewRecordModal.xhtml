@@ -10,92 +10,66 @@
 
     <h:head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+        <link rel="stylesheet" type="text/css" href="modal2.css"/>
     </h:head>
-    <h:body>
-        <div id="ViewOneRecord">
+    <h:body >
+        <div style="background-color: #CCE7FF;">
+            <!--Registro de qual Avião?-->
             <p:outputLabel value="Avião" for="dd" /><br/>
-            <p:autoComplete id="dd" dropdown="true"  />
-
-            <p:fieldset id="LogBook" legend="Diário" >
-                <table cellspacing="10" style="font-size: 15px;">
-                    <tr><!--Linha 1-->
-                        <td >
-                            <h:outputLabel for="Number" value="Número" /><br/>
-                            <p:inputText id="Number" size="10"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="Page" value="Página" /><br/>
-                            <p:inputText id="Page" size="5"/>
-                        </td>
-                    </tr>
-                    <tr> <!--Linha 2-->
-                        <td ><!--Colunas-->
-                            <h:outputLabel for="DateLog" value="Data" /><br/>
-                            <p:inputMask id="DateLog" mask="99/99/9999" size="10"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="From" value="De" /><br/>
-                            <p:inputText id="From" size="5"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="To" value="Para" /><br/>
-                            <p:inputText id="To" size="5"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="StartTimeLog" value="Partida" /><br/>
-                            <p:inputText id="StartTimeLog" size="5"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="FinalTimeLog" value="Corte" /><br/>
-                            <p:inputText id="FinalTimeLog" size="5"/>
-                        </td>
-                        <td>
-                            <p:fieldset id="TotalLog" legend="Total">
-                                <table cellspacing="10">
-                                    <td>
-                                        <h:outputLabel for="TotalTimeLog" value="Relógio" /><br/>
-                                        <p:inputText id="TotalTimeLog" size="5"/>
-                                    </td>
-                                    <td>
-                                        <h:outputLabel for="TotalTacLog" value="Tac" /><br/>
-                                        <p:inputText id="TotalTacLog" size="5"/>
-                                    </td>
-                                </table>
-                            </p:fieldset>
-                        </td>
-                        <td >
-                            <h:outputLabel for="LandingsLog" value="Pousos" /><br/>
-                            <p:inputText id="LandingsLog" size="2"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="NatLog" value="Nat" /><br/>
-                            <p:inputText id="NatLog" size="2"/>
-                        </td>
-                    </tr>
-                    <tr><!--Linha 3-->
-                        <td >
-                            <h:outputLabel for="Pilot1Log" value="Piloto 1" /><br/>
-                            <p:inputText id="Pilot1Log" size="10"/>
-                        </td>
-                        <td >
-                            <h:outputLabel for="Pilot2Log" value="Piloto 2" /><br/>
-                            <p:inputText id="Pilot2Log" size="5"/>
-                        </td>
-                        <td colspan="4">
-                            <h:outputLabel for="ObsLog" value="Obs" /><br/>
-                            <p:inputText id="ObsLog" size="60"/>
-                        </td>
-                        <td colspan="2">
-                            <h:outputLabel for="VerifiedLog" value="Verificado Por" /><br/>
-                            <p:inputText id="VerifiedLog" size="10"/>
-                        </td>
-                    </tr>
-                </table>
+            <p:autoComplete id="dd" dropdown="true" size="4"/><br/><br/>
+            <p:fieldset id="LBModal" legend="Diário" style="width: 678px; height: 155px; background-color: #CCE7FF;">
+                <!--Número do Diário-->
+                <h:outputLabel for="NumberModal" value="Número" style="position: absolute; top: 93px; left: 25px;"/><br/>
+                <p:inputText   id="NumberModal"  size="10" style="position: absolute; top: 107px; left: 25px;"/>
+                <!--Página do Diário-->
+                <h:outputLabel for="PageModal" value="Página" style="position: absolute; top: 93px; left: 135px;"/><br/>
+                <p:inputText id="PageModal" size="2" style="position: absolute; top: 107px; left: 135px;"/>
+                <!--Data do voo-->
+                <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 135px; left: 25px;"/><br/>
+                <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 149px; left: 25px;"/>
+                <!--De onde-->
+                <p:outputLabel value="De" for="From" style="position: absolute; top: 135px; left: 135px;"/><br/>
+                <p:autoComplete id="From" dropdown="true" size="3" style="position: absolute; top: 149px; left: 135px;"/>
+                <!--Para onde-->
+                <p:outputLabel value="Para" for="To" style="position: absolute; top: 135px; left: 224px;"/><br/>
+                <p:autoComplete id="To" dropdown="true" size="3" style="position: absolute; top: 149px; left: 224px;"/>
+                <!--Hora da partida-->
+                <h:outputLabel for="StartTimeLog" value="Partida" style="position: absolute; top: 135px; left: 313px;"/><br/>
+                <p:inputText id="StartTimeLog" size="2" style="position: absolute; top: 149px; left: 313px;"/>
+                <!--Hora do corte-->
+                <h:outputLabel for="FinalTimeLog" value="Corte" style="position: absolute; top: 135px; left: 370px;"/><br/>
+                <p:inputText id="FinalTimeLog" size="2" style="position: absolute; top: 149px; left: 370px;"/>
+                <!--Totais-->
+                <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 100px; left: 427px; width: 102px; height: 65px; background-color: #CCE7FF;">
+                    <!--Total relógio-->
+                    <h:outputLabel for="TotalTimeLog" value="Relógio" style="position: absolute; top: 34px; left: 10px;"/><br/>
+                    <p:inputText id="TotalTimeLog" size="2" style="position: absolute; top: 48px; left: 10px;"/>
+                    <!--Total tacômetro-->
+                    <h:outputLabel for="TotalTacLog" value="Tac" style="position: absolute; top: 34px; left: 68px;"/><br/>
+                    <p:inputText id="TotalTacLog" size="2" style="position: absolute; top: 48px; left: 68px;"/>
+                </p:fieldset>
+                <!--Pousos-->
+                <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 135px; left: 570px;"/><br/>
+                <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 149px; left: 570px;"/>
+                <!--Natureza do voo-->
+                <p:outputLabel value="Nat" for="NatLog" style="position: absolute; top: 135px; left: 628px;"/><br/>
+                <p:autoComplete id="NatLog" dropdown="true" size="2" style="position: absolute; top: 149px; left: 628px;"/>
+                <!--Piloto 1 - Inva-->
+                <p:outputLabel value="Piloto 1" for="Pilot1Log" style="position: absolute; top: 177px; left: 25px;"/><br/>
+                <p:autoComplete id="Pilot1Log" dropdown="true" size="10" style="position: absolute; top: 191px; left: 25px;"/>
+                <!--Piloto 2 - Aluno-->
+                <p:outputLabel value="Piloto 2" for="Pilot2Log" style="position: absolute; top: 177px; left: 160px;"/><br/>
+                <p:autoComplete id="Pilot2Log" dropdown="true" size="10" style="position: absolute; top: 191px; left: 160px;"/>
+                <!--Observações-->
+                <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 177px; left: 295px;"/><br/>
+                <p:inputText id="ObsLog" size="33" style="position: absolute; top: 191px; left: 295px;"/>
+                <!--Registro no Diário verificado por:-->
+                <p:outputLabel value="Verificado Por" for="VerifiedLog" style="position: absolute; top: 177px; left: 570px;"/><br/>
+                <p:autoComplete id="VerifiedLog" dropdown="true" size="11" style="position: absolute; top: 191px; left: 570px;"/>
             </p:fieldset>
             <br/>
 
-            <p:fieldset id="Rod" legend="ROD" >
+            <p:fieldset id="RModal" legend="ROD" >
                 <table cellspacing="10" style="font-size: 15px;">
                     <tr> <!--Linha 1-->
                         <td ><!--Colunas-->
@@ -143,32 +117,42 @@
                             <p:inputText id="LandingsRod" size="2"/>
                         </td>
                         <td >
-                            <h:outputLabel for="NatRod" value="Nat" /><br/>
-                            <p:inputText id="NatRod" size="2"/>
+                            <p:outputLabel value="Nat" for="NatRod" /><br/>
+                            <p:autoComplete id="NatRod" dropdown="true" size="2" />
                         </td>
                     </tr>
                     <table cellspacing="10" style="font-size: 15px;">
                         <tr><!--Linha 2-->
                             <td >
-                                <h:outputLabel for="Pilot1Rod" value="Piloto 1" /><br/>
-                                <p:inputText id="Pilot1Rod" size="10"/>
+                                <p:outputLabel value="Piloto 1" for="Pilot1Rod" /><br/>
+                                <p:autoComplete id="Pilot1Rod" dropdown="true" size="10" />
                             </td>
                             <td >
-                                <h:outputLabel for="Pilot2Rod" value="Piloto 2" /><br/>
-                                <p:inputText id="Pilot2Rod" size="5"/>
+                                <p:outputLabel value="Piloto 2" for="Pilot2Rod" /><br/>
+                                <p:autoComplete id="Pilot2Rod" dropdown="true" size="10" />
                             </td>
                             <td colspan="1">
                                 <h:outputLabel for="ObsRod" value="Obs" /><br/>
                                 <p:inputText id="ObsRod" size="60"/>
                             </td>
                             <td colspan="2">
-                                <h:outputLabel for="VerifiedRod" value="Verificado Por" /><br/>
-                                <p:inputText id="VerifiedRod" size="10"/>
+                                <p:outputLabel value="Verificado Por" for="VerifiedRod" /><br/>
+                                <p:autoComplete id="VerifiedRod" dropdown="true" size="10" />
                             </td>
                         </tr>
                     </table>
                 </table>
             </p:fieldset>
+            <table cellspacing="30" style="width: 100%;">
+                <tr>
+                    <td style="text-align: right;">
+                        <p:commandButton value="Salvar" id="Save" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                    </td>
+                    <td>
+                        <p:commandButton value="Cancelar" id="Cancel" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                    </td>
+                </tr>
+            </table>
         </div>
     </h:body>
 </html>
