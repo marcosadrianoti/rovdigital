@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="modal2.css"/>
     </h:head>
-    <h:body  >
+    <h:body SCROLL="no" >
         <div style="margin-top: -5px; margin-bottom: -5px; margin-left: -10px; margin-right: -10px; padding: 10px; background-color: #CCE7FF;">
             <!--Registro de qual Avião?-->
             <p:outputLabel value="Avião" for="dd" /><br/>
@@ -26,7 +26,8 @@
                 <p:inputText id="PageModal" size="2" style="position: absolute; top: 107px; left: 135px;"/>
                 <!--Data do voo-->
                 <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 135px; left: 25px;"/>
-                <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 149px; left: 25px;"/>
+                <!--<p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 149px; left: 25px;"/>-->
+                <p:calendar id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 149px; left: 25px;"/>
                 <!--De onde-->
                 <p:outputLabel value="De" for="From" style="position: absolute; top: 135px; left: 135px;"/>
                 <p:autoComplete id="From" dropdown="true" size="3" style="position: absolute; top: 149px; left: 135px;"/>
@@ -74,7 +75,8 @@
                 <!--                    <tr> Linha 1-->
                 <!--                        <td >Colunas-->
                 <h:outputLabel for="DateRod" value="Data" style="position: absolute; top: 304px; left: 25px;"/>
-                <p:inputMask id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 318px; left: 25px;"/>
+                <!--<p:inputMask id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 318px; left: 25px;"/>-->
+                <p:calendar id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 318px; left: 25px;"/>
                 <!--</td>-->
                 <!--<td >-->
                 <p:fieldset id="TimeRod" legend="Relógio" style="position: absolute; top: 270px; left: 135px; width: 160px; height: 65px; background-color: #CCE7FF;">
