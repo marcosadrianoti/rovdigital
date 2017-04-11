@@ -13,84 +13,59 @@
         <link rel="stylesheet" type="text/css" href="css/Styles.css" />
     </h:head>
     <h:body>
-        <div id="ViewOneRecord">
+        <div id="ViewOneRecord" style="font-size: 12px; font-family: Arial; font-weight: normal;">
             <p:fieldset id="Record" legend="PT-NSV" toggleable="true" toggleSpeed="500"  collapsed="true">
                 <p:ajax event="toggle"  />
-                <p:fieldset id="LogBook" legend="Diário" >
-                    <table cellspacing="10" style="font-size: 15px;">
-                        <tr><!--Linha 1-->
-                            <td >
-                                <h:outputLabel for="Number" value="Número" /><br/>
-                                <p:inputText id="Number" size="10"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="Page" value="Página" /><br/>
-                                <p:inputText id="Page" size="5"/>
-                            </td>
-                        </tr>
-                        <tr> <!--Linha 2-->
-                            <td ><!--Colunas-->
-                                <h:outputLabel for="DateLog" value="Data" /><br/>
-                                <p:inputMask id="DateLog" mask="99/99/9999" size="10"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="From" value="De" /><br/>
-                                <p:inputText id="From" size="5"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="To" value="Para" /><br/>
-                                <p:inputText id="To" size="5"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="StartTimeLog" value="Partida" /><br/>
-                                <p:inputText id="StartTimeLog" size="5"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="FinalTimeLog" value="Corte" /><br/>
-                                <p:inputText id="FinalTimeLog" size="5"/>
-                            </td>
-                            <td>
-                                <p:fieldset id="TotalLog" legend="Total">
-                                    <table cellspacing="10">
-                                        <td>
-                                            <h:outputLabel for="TotalTimeLog" value="Relógio" /><br/>
-                                            <p:inputText id="TotalTimeLog" size="5"/>
-                                        </td>
-                                        <td>
-                                            <h:outputLabel for="TotalTacLog" value="Tac" /><br/>
-                                            <p:inputText id="TotalTacLog" size="5"/>
-                                        </td>
-                                    </table>
+                <p:fieldset id="LogBook" legend="Diário" style=" width: 600px; height: 135px;">
+                            <!--<td >-->
+                                <h:outputLabel for="Number" value="Número" style="position: absolute; top: 60px; left: 50px;"/><br/>
+                                <p:inputText id="Number" size="10" style="position: absolute; top: 74px; left: 50px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="Page" value="Página" style="position: absolute; top: 60px; left: 160px;"/><br/>
+                                <p:inputText id="Page" size="2" style="position: absolute; top: 74px; left: 160px;"/>
+<!--                            <td >Colunas-->
+                                <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 102px; left: 50px;"/><br/>
+                                <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 116px; left: 50px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="From" value="De" style="position: absolute; top: 102px; left: 160px;"/><br/>
+                                <p:inputText id="From" size="3" style="position: absolute; top: 116px; left: 160px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="To" value="Para" style="position: absolute; top: 102px; left: 227px;"/><br/>
+                                <p:inputText id="To" size="3" style="position: absolute; top: 116px; left: 227px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="StartTimeLog" value="Partida" style="position: absolute; top: 102px; left: 293px;"/><br/>
+                                <p:inputText id="StartTimeLog" size="2" style="position: absolute; top: 116px; left: 293px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="FinalTimeLog" value="Corte" style="position: absolute; top: 102px; left: 353px;"/><br/>
+                                <p:inputText id="FinalTimeLog" size="2" style="position: absolute; top: 116px; left: 353px;"/>
+                            <!--<td>-->
+                                <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 87px; left: 407px; width: 102px; height: 45px;">
+                                        <!--<td>-->
+                                            <h:outputLabel for="TotalTimeLog" value="Relógio" style="position: absolute; top: 14px; left: 10px;"/><br/>
+                                            <p:inputText id="TotalTimeLog" size="2" style="position: absolute; top: 28px; left: 10px;"/>
+                                        <!--<td>-->
+                                            <h:outputLabel for="TotalTacLog" value="Tac" style="position: absolute; top: 14px; left: 68px;"/><br/>
+                                            <p:inputText id="TotalTacLog" size="2" style="position: absolute; top: 28px; left: 68px;"/>
+                                        <!--</td>-->
                                 </p:fieldset>
-                            </td>
-                            <td >
-                                <h:outputLabel for="LandingsLog" value="Pousos" /><br/>
-                                <p:inputText id="LandingsLog" size="2"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="NatLog" value="Nat" /><br/>
-                                <p:inputText id="NatLog" size="2"/>
-                            </td>
-                        </tr>
-                        <tr><!--Linha 3-->
-                            <td >
-                                <h:outputLabel for="Pilot1Log" value="Piloto 1" /><br/>
-                                <p:inputText id="Pilot1Log" size="10"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="Pilot2Log" value="Piloto 2" /><br/>
-                                <p:inputText id="Pilot2Log" size="5"/>
-                            </td>
-                            <td colspan="4">
-                                <h:outputLabel for="ObsLog" value="Obs" /><br/>
-                                <p:inputText id="ObsLog" size="60"/>
-                            </td>
-                            <td colspan="2">
-                                <h:outputLabel for="VerifiedLog" value="Verificado Por" /><br/>
-                                <p:inputText id="VerifiedLog" size="10"/>
-                            </td>
-                        </tr>
-                    </table>
+                            <!--<td >-->
+                                <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 102px; left: 547px;"/><br/>
+                                <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 116px; left: 547px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="NatLog" value="Nat" style="position: absolute; top: 102px; left: 605px;"/><br/>
+                                <p:inputText id="NatLog" size="2" style="position: absolute; top: 116px; left: 605px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="Pilot1Log" value="Piloto 1" style="position: absolute; top: 145px; left: 50px;"/><br/>
+                                <p:inputText id="Pilot1Log" size="10" style="position: absolute; top: 159px; left: 50px;"/>
+                            <!--<td >-->
+                                <h:outputLabel for="Pilot2Log" value="Piloto 2" style="position: absolute; top: 145px; left: 160px;"/><br/>
+                                <p:inputText id="Pilot2Log" size="10" style="position: absolute; top: 159px; left: 160px;"/>
+                            <!--</td>-->
+                                <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 145px; left: 271px;"/><br/>
+                                <p:inputText id="ObsLog" size="36" style="position: absolute; top: 159px; left: 271px;"/>
+                            <!--</td>-->
+                                <h:outputLabel for="VerifiedLog" value="Verificado Por" style="position: absolute; top: 145px; left: 547px;"/><br/>
+                                <p:inputText id="VerifiedLog" size="11" style="position: absolute; top: 159px; left: 547px;"/>
                 </p:fieldset>
                 <br/>
 
