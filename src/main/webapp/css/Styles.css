@@ -31,8 +31,8 @@ and open the template in the editor.
     margin-top: -15px;
     font-family: arial;
     font-size: 15px;
-    background-color : #ffffff;
-    border-color: transparent;
+    background-color : white;
+    border-color: lightgrey;
     position: absolute;
 }
 
