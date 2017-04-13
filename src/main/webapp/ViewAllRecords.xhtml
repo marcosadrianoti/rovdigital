@@ -10,150 +10,125 @@
 
     <h:head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/Styles.css?version=1"/>
     </h:head>
     <h:body>
         <div id="ViewOneRecord" style="font-size: 12px; font-family: Arial; font-weight: normal;">
-            <p:fieldset id="Record" legend="PT-NSV" toggleable="true" toggleSpeed="500"  collapsed="true">
+            <p:fieldset id="Record" legend="PT-NSV" toggleable="true" toggleSpeed="500"  collapsed="true" style="width: 100px;">
                 <p:ajax event="toggle"  />
+                <!--DIÁRIO-->
                 <p:fieldset id="LogBook" legend="Diário" style=" width: 600px; height: 135px;">
-                            <!--<td >-->
-                                <h:outputLabel for="Number" value="Número" style="position: absolute; top: 60px; left: 50px;"/><br/>
-                                <p:inputText id="Number" size="10" style="position: absolute; top: 74px; left: 50px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="Page" value="Página" style="position: absolute; top: 60px; left: 160px;"/><br/>
-                                <p:inputText id="Page" size="2" style="position: absolute; top: 74px; left: 160px;"/>
-<!--                            <td >Colunas-->
-                                <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 102px; left: 50px;"/><br/>
-                                <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 116px; left: 50px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="From" value="De" style="position: absolute; top: 102px; left: 160px;"/><br/>
-                                <p:inputText id="From" size="3" style="position: absolute; top: 116px; left: 160px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="To" value="Para" style="position: absolute; top: 102px; left: 227px;"/><br/>
-                                <p:inputText id="To" size="3" style="position: absolute; top: 116px; left: 227px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="StartTimeLog" value="Partida" style="position: absolute; top: 102px; left: 293px;"/><br/>
-                                <p:inputText id="StartTimeLog" size="2" style="position: absolute; top: 116px; left: 293px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="FinalTimeLog" value="Corte" style="position: absolute; top: 102px; left: 353px;"/><br/>
-                                <p:inputText id="FinalTimeLog" size="2" style="position: absolute; top: 116px; left: 353px;"/>
-                            <!--<td>-->
-                                <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 87px; left: 407px; width: 102px; height: 45px;">
-                                        <!--<td>-->
-                                            <h:outputLabel for="TotalTimeLog" value="Relógio" style="position: absolute; top: 14px; left: 10px;"/><br/>
-                                            <p:inputText id="TotalTimeLog" size="2" style="position: absolute; top: 28px; left: 10px;"/>
-                                        <!--<td>-->
-                                            <h:outputLabel for="TotalTacLog" value="Tac" style="position: absolute; top: 14px; left: 68px;"/><br/>
-                                            <p:inputText id="TotalTacLog" size="2" style="position: absolute; top: 28px; left: 68px;"/>
-                                        <!--</td>-->
-                                </p:fieldset>
-                            <!--<td >-->
-                                <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 102px; left: 547px;"/><br/>
-                                <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 116px; left: 547px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="NatLog" value="Nat" style="position: absolute; top: 102px; left: 605px;"/><br/>
-                                <p:inputText id="NatLog" size="2" style="position: absolute; top: 116px; left: 605px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="Pilot1Log" value="Piloto 1" style="position: absolute; top: 145px; left: 50px;"/><br/>
-                                <p:inputText id="Pilot1Log" size="10" style="position: absolute; top: 159px; left: 50px;"/>
-                            <!--<td >-->
-                                <h:outputLabel for="Pilot2Log" value="Piloto 2" style="position: absolute; top: 145px; left: 160px;"/><br/>
-                                <p:inputText id="Pilot2Log" size="10" style="position: absolute; top: 159px; left: 160px;"/>
-                            <!--</td>-->
-                                <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 145px; left: 271px;"/><br/>
-                                <p:inputText id="ObsLog" size="36" style="position: absolute; top: 159px; left: 271px;"/>
-                            <!--</td>-->
-                                <h:outputLabel for="VerifiedLog" value="Verificado Por" style="position: absolute; top: 145px; left: 547px;"/><br/>
-                                <p:inputText id="VerifiedLog" size="11" style="position: absolute; top: 159px; left: 547px;"/>
+                    <!--Número do Diário-->
+                    <h:outputLabel for="Number" value="Número" style="position: absolute; top: 60px; left: 50px;"/><br/>
+                    <p:inputText id="Number" size="10" style="position: absolute; top: 74px; left: 50px;"/>
+                    <!--Página do Diário-->
+                    <h:outputLabel for="Page" value="Página" style="position: absolute; top: 60px; left: 160px;"/><br/>
+                    <p:inputText id="Page" size="2" style="position: absolute; top: 74px; left: 160px;"/>
+                    <!--Data do voo-->
+                    <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 102px; left: 50px;"/><br/>
+                    <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 116px; left: 50px;"/>
+                    <!--De onde-->
+                    <h:outputLabel for="From" value="De" style="position: absolute; top: 102px; left: 160px;"/><br/>
+                    <p:inputText id="From" size="3" style="position: absolute; top: 116px; left: 160px;"/>
+                    <!--Para onde-->
+                    <h:outputLabel for="To" value="Para" style="position: absolute; top: 102px; left: 227px;"/><br/>
+                    <p:inputText id="To" size="3" style="position: absolute; top: 116px; left: 227px;"/>
+                    <!--Horário da partida do motor-->
+                    <h:outputLabel for="StartTimeLog" value="Partida" style="position: absolute; top: 102px; left: 293px;"/><br/>
+                    <p:inputText id="StartTimeLog" size="2" style="position: absolute; top: 116px; left: 293px;"/>
+                    <!--Horário do corte do motor-->
+                    <h:outputLabel for="FinalTimeLog" value="Corte" style="position: absolute; top: 102px; left: 353px;"/><br/>
+                    <p:inputText id="FinalTimeLog" size="2" style="position: absolute; top: 116px; left: 353px;"/>
+                    <!--Totais-->
+                    <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 87px; left: 407px; width: 102px; height: 45px;">
+                        <!--Total do tempo relógio do voo-->
+                        <h:outputLabel for="TotalTimeLog" value="Relógio" style="position: absolute; top: 14px; left: 10px;"/><br/>
+                        <p:inputText id="TotalTimeLog" size="2" style="position: absolute; top: 28px; left: 10px;"/>
+                        <!--Total do tempo tacômetro do voo-->
+                        <h:outputLabel for="TotalTacLog" value="Tac" style="position: absolute; top: 14px; left: 68px;"/><br/>
+                        <p:inputText id="TotalTacLog" size="2" style="position: absolute; top: 28px; left: 68px;"/>
+                        <!--</td>-->
+                    </p:fieldset>
+                    <!--Pousos-->
+                    <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 102px; left: 547px;"/><br/>
+                    <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 116px; left: 547px;"/>
+                    <!--Natureza do voo-->
+                    <h:outputLabel for="NatLog" value="Nat" style="position: absolute; top: 102px; left: 605px;"/><br/>
+                    <p:inputText id="NatLog" size="2" style="position: absolute; top: 116px; left: 605px;"/>
+                    <!--Piloto 1-->
+                    <h:outputLabel for="Pilot1Log" value="Piloto 1" style="position: absolute; top: 145px; left: 50px;"/><br/>
+                    <p:inputText id="Pilot1Log" size="10" style="position: absolute; top: 159px; left: 50px;"/>
+                    <!--Piloto 2-->
+                    <h:outputLabel for="Pilot2Log" value="Piloto 2" style="position: absolute; top: 145px; left: 160px;"/><br/>
+                    <p:inputText id="Pilot2Log" size="10" style="position: absolute; top: 159px; left: 160px;"/>
+                    <!--Observações-->
+                    <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 145px; left: 271px;"/><br/>
+                    <p:inputText id="ObsLog" size="36" style="position: absolute; top: 159px; left: 271px;"/>
+                    <!--Registro do diário verificado por-->
+                    <h:outputLabel for="VerifiedLog" value="Verificado Por" style="position: absolute; top: 145px; left: 547px;"/><br/>
+                    <p:inputText id="VerifiedLog" size="11" style="position: absolute; top: 159px; left: 547px;"/>
                 </p:fieldset>
                 <br/>
-
-                <p:fieldset id="Rod" legend="ROD" >
-                    <table cellspacing="10" style="font-size: 15px;">
-                        <tr> <!--Linha 1-->
-                            <td ><!--Colunas-->
-                                <h:outputLabel for="DateRod" value="Data" /><br/>
-                                <p:inputMask id="DateRod" mask="99/99/9999" size="10"/>
-                            </td>
-                            <td >
-                                <p:fieldset id="TimeRod" legend="Relógio">
-                                    <table cellspacing="10">
-                                        <td>
-                                            <h:outputLabel for="StartTimeRod" value="Partida" /><br/>
-                                            <p:inputText id="StartTimeRod" size="5"/>
-                                        </td>
-                                        <td>
-                                            <h:outputLabel for="FinalTimeRod" value="Corte" /><br/>
-                                            <p:inputText id="FinalTimeRod" size="5"/>
-                                        </td>
-                                        <td>
-                                            <h:outputLabel for="TotalTimeRod" value="Total" /><br/>
-                                            <p:inputText id="TotalTimeRod" size="5"/>
-                                        </td>
-                                    </table>
-                                </p:fieldset>
-                            </td>
-                            <td >
-                                <p:fieldset id="TacRod" legend="Tac">
-                                    <table cellspacing="10">
-                                        <td>
-                                            <h:outputLabel for="StartTacRod" value="Partida" /><br/>
-                                            <p:inputText id="StartTacRod" size="5"/>
-                                        </td>
-                                        <td>
-                                            <h:outputLabel for="FinalTacRod" value="Corte" /><br/>
-                                            <p:inputText id="FinalTacRod" size="5"/>
-                                        </td>
-                                        <td>
-                                            <h:outputLabel for="TotalTacRod" value="Total" /><br/>
-                                            <p:inputText id="TotalTacRod" size="5"/>
-                                        </td>
-                                    </table>
-                                </p:fieldset>
-                            </td>
-                            <td >
-                                <h:outputLabel for="LandingsRod" value="Pousos" /><br/>
-                                <p:inputText id="LandingsRod" size="2"/>
-                            </td>
-                            <td >
-                                <h:outputLabel for="NatRod" value="Nat" /><br/>
-                                <p:inputText id="NatRod" size="2"/>
-                            </td>
-                        </tr>
-                        <table cellspacing="10" style="font-size: 15px;">
-                            <tr><!--Linha 2-->
-                                <td >
-                                    <h:outputLabel for="Pilot1Rod" value="Piloto 1" /><br/>
-                                    <p:inputText id="Pilot1Rod" size="10"/>
-                                </td>
-                                <td >
-                                    <h:outputLabel for="Pilot2Rod" value="Piloto 2" /><br/>
-                                    <p:inputText id="Pilot2Rod" size="5"/>
-                                </td>
-                                <td colspan="1">
-                                    <h:outputLabel for="ObsRod" value="Obs" /><br/>
-                                    <p:inputText id="ObsRod" size="60"/>
-                                </td>
-                                <td colspan="2">
-                                    <h:outputLabel for="VerifiedRod" value="Verificado Por" /><br/>
-                                    <p:inputText id="VerifiedRod" size="10"/>
-                                </td>
-                            </tr>
-                        </table>
-                    </table>
+                <!--ROD-->
+                <p:fieldset id="Rod" legend="ROD" style=" width: 715px; height: 125px;">
+                        <!--Data do voo-->
+                        <h:outputLabel for="DateRod" value="Data" style="position: absolute; top: 242px; left: 50px;"/><br/>
+                        <p:inputMask id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 256px; left: 50px;"/>
+                        <!--Dados do relógio-->
+                        <p:fieldset id="TimeRod" legend="Relógio" style="position: absolute; top: 230px; left: 155px; width: 213px; height: 45px;">
+                            <!--Horário da partida do motor-->
+                            <h:outputLabel for="StartTimeRod" value="Partida" style="position: absolute; top: 10px; left: 10px;"/><br/>
+                            <p:inputText id="StartTimeRod" size="5" style="position: absolute; top: 24px; left: 10px;"/>
+                            <!--Horário do corte do motor-->
+                            <h:outputLabel for="FinalTimeRod" value="Corte" style="position: absolute; top: 10px; left: 85px;"/><br/>
+                            <p:inputText id="FinalTimeRod" size="5" style="position: absolute; top: 24px; left: 85px;"/>
+                            <!--Tempo total em décimos de hora-->
+                            <h:outputLabel for="TotalTimeRod" value="Total" style="position: absolute; top: 10px; left: 160px;"/><br/>
+                            <p:inputText id="TotalTimeRod" size="5" style="position: absolute; top: 24px; left: 160px;"/>
+                        </p:fieldset>
+                        <!--Dados do tacômetro-->
+                        <p:fieldset id="TacRod" legend="Tac" style="position: absolute; top: 230px; left: 407px; width: 213px; height: 45px;">
+                            <!--Tac na partida do motor-->
+                            <h:outputLabel for="StartTacRod" value="Partida" style="position: absolute; top: 10px; left: 10px;"/><br/>
+                            <p:inputText id="StartTacRod" size="5" style="position: absolute; top: 24px; left: 10px;"/>
+                            <!--Tac no corte do motor-->
+                            <h:outputLabel for="FinalTacRod" value="Corte" style="position: absolute; top: 10px; left: 85px;"/><br/>
+                            <p:inputText id="FinalTacRod" size="5" style="position: absolute; top: 24px; left: 85px;"/>
+                            <!--Tac total-->
+                            <h:outputLabel for="TotalTacRod" value="Total" style="position: absolute; top: 10px; left: 160px;"/><br/>
+                            <p:inputText id="TotalTacRod" size="5" style="position: absolute; top: 24px; left: 160px;"/>
+                        </p:fieldset>
+                        <!--Pousos-->
+                        <h:outputLabel for="LandingsRod" value="Pousos" style="position: absolute; top: 242px; left: 660px;"/><br/>
+                        <p:inputText id="LandingsRod" size="2" style="position: absolute; top: 256px; left: 660px;"/>
+                        <!--Natureza-->
+                        <h:outputLabel for="NatRod" value="Nat" style="position: absolute; top: 242px; left: 720px;"/><br/>
+                        <p:inputText id="NatRod" size="2" style="position: absolute; top: 256px; left: 720px;"/>
+                        <!--Piloto 1-->
+                        <h:outputLabel for="Pilot1Rod" value="Piloto 1" style="position: absolute; top: 300px; left: 50px;"/><br/>
+                        <p:inputText id="Pilot1Rod" size="10" style="position: absolute; top: 314px; left: 50px;"/>
+                        <!--Piloto 2-->
+                        <h:outputLabel for="Pilot2Rod" value="Piloto 2" style="position: absolute; top: 300px; left: 155px;"/><br/>
+                        <p:inputText id="Pilot2Rod" size="10" style="position: absolute; top: 314px; left: 155px;"/>
+                        <!--Observações-->
+                        <h:outputLabel for="ObsRod" value="Obs" style="position: absolute; top: 300px; left: 260px;"/><br/>
+                        <p:inputText id="ObsRod" size="33" style="position: absolute; top: 314px; left: 260px;"/>
+                        <!--Registro do ROD verificado por-->
+                        <h:outputLabel for="VerifiedRod" value="Verificado Por" style="position: absolute; top: 300px; left: 505px;"/><br/>
+                        <p:inputText id="VerifiedRod" size="10" style="position: absolute; top: 314px; left: 505px;"/>
                 </p:fieldset>
+                <br/>
             </p:fieldset>
         </div>
-            <br/>
+        <br/>
         <div id="ViewAllRecords">
-            <p:dataTable var="sale" value="">
+            <p:dataTable var="sale" value="" style="font-size: 12px; font-family: Arial; font-weight: normal;">
 
                 <p:columnGroup type="header">
                     <p:row>
                         <p:column colspan="2" rowspan="2" style="background-color: transparent; border-left-color: transparent; border-top-color: transparent; " />
-                        <p:column colspan="4" headerText="Diário" style="background-color: transparent;" />
-                        <p:column colspan="6" headerText="Rod" style="background-color: transparent;" />
+                        <p:column colspan="4" headerText="DIÁRIO" style="background-color: transparent;" />
+                        <p:column colspan="6" headerText="ROD" style="background-color: transparent;" />
                     </p:row>
                     <p:row>
 
@@ -163,7 +138,7 @@
                         <p:column colspan="3" headerText="TAC" />
                         <p:column colspan="5" headerText="Dados" />
                     </p:row>
-                    <p:row style="font-size: 15px; background-color: #F7F7F7">
+                    <p:row style="background-color: #F7F7F7">
                         <p:column headerText="Data" />
                         <p:column headerText="Avião" />
                         <p:column headerText="Partida" />
