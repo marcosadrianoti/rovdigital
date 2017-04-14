@@ -17,7 +17,7 @@
             <p:fieldset id="Record" legend="PT-NSV" toggleable="true" toggleSpeed="500"  collapsed="true" style="width: 100px;">
                 <p:ajax event="toggle"/>
                 <!--DIÁRIO-->
-                <p:fieldset id="LogBook" legend="Diário" style=" width: 770px; height: 180px;">
+                <p:fieldset id="LogBook" legend="Diário" style=" width: 770px; height: 213px;">
                     <!--1ª LINHA-->
                     <!--Número do Diário-->
                     <h:outputLabel for="Number" value="Número" style="position: absolute; top: 60px; left: 50px;"/>
@@ -27,10 +27,10 @@
                     <p:inputText id="Page" size="2" style="position: absolute; top: 74px; left: 160px;"/>
                     <!--2ª LINHA-->
                     <!--Data do voo-->
-                    <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 102px; left: 50px;"/>
-                    <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 116px; left: 50px;"/>
-                    <!--Horas-->
-                    <p:fieldset id="PathLog" legend="Trecho" style="position: absolute; top: 87px; left: 158px; width: 113px; height: 45px;">
+                    <h:outputLabel for="DateLog" value="Data" style="position: absolute; top: 125px; left: 50px;"/>
+                    <p:inputMask id="DateLog" mask="99/99/9999" size="10" style="position: absolute; top: 139px; left: 50px;"/>
+                    <!--Trecho voado-->
+                    <p:fieldset id="PathLog" legend="Trecho" style="position: absolute; top: 110px; left: 158px; width: 113px; height: 45px;">
                         <!--De onde-->
                         <h:outputLabel for="From" value="De" style="position: absolute; top: 14px; left: 10px;"/>
                         <p:inputText id="From" size="3" style="position: absolute; top: 28px; left: 10px;"/>
@@ -39,7 +39,7 @@
                         <p:inputText id="To" size="3" style="position: absolute; top: 28px; left: 72px;"/>
                     </p:fieldset>
                     <!--Horas-->
-                    <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 87px; left: 311px; width: 350px; height: 45px;">
+                    <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 110px; left: 311px; width: 350px; height: 45px;">
                         <!--Horário da partida do motor-->
                         <h:outputLabel for="StartTimeLog" value="Partida" style="position: absolute; top: 14px; left: 10px;"/>
                         <p:inputText id="StartTimeLog" size="2" style="position: absolute; top: 28px; left: 10px;"/>
@@ -63,7 +63,7 @@
                         <p:inputText id="IfrcTimeLog" size="1" style="position: absolute; top: 28px; left: 320px;"/>
                     </p:fieldset>
                     <!--Totais-->
-                    <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 87px; left: 700px; width: 93px; height: 45px;">
+                    <p:fieldset id="TotalLog" legend="Total" style="position: absolute; top: 110px; left: 700px; width: 93px; height: 45px;">
                         <!--Total do tempo relógio do voo-->
                         <h:outputLabel for="TotalTimeLog" value="Relógio" style="position: absolute; top: 14px; left: 10px;"/>
                         <p:inputText id="TotalTimeLog" size="1" style="position: absolute; top: 28px; left: 10px;"/>
@@ -74,37 +74,37 @@
                     </p:fieldset>
                     <!--3ª LINHA-->
                     <!--Pousos-->
-                    <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 145px; left: 50px;"/>
-                    <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 159px; left: 50px;"/>
+                    <h:outputLabel for="LandingsLog" value="Pousos" style="position: absolute; top: 178px; left: 50px;"/>
+                    <p:inputText id="LandingsLog" size="2" style="position: absolute; top: 192px; left: 50px;"/>
                     <!--Natureza do voo-->
-                    <h:outputLabel for="NatLog" value="Nat" style="position: absolute; top: 145px; left: 110px;"/>
-                    <p:inputText id="NatLog" size="2" style="position: absolute; top: 159px; left: 110px;"/>
+                    <h:outputLabel for="NatLog" value="Nat" style="position: absolute; top: 178px; left: 110px;"/>
+                    <p:inputText id="NatLog" size="2" style="position: absolute; top: 192px; left: 110px;"/>
                     <!--Piloto 1-->
-                    <h:outputLabel for="Pilot1Log" value="Piloto 1" style="position: absolute; top: 145px; left: 170px;"/>
-                    <p:inputText id="Pilot1Log" size="10" style="position: absolute; top: 159px; left: 170px;"/>
+                    <h:outputLabel for="Pilot1Log" value="Piloto 1" style="position: absolute; top: 178px; left: 170px;"/>
+                    <p:inputText id="Pilot1Log" size="10" style="position: absolute; top: 192px; left: 170px;"/>
                     <!--Piloto 2-->
-                    <h:outputLabel for="Pilot2Log" value="Piloto 2" style="position: absolute; top: 145px; left: 280px;"/>
-                    <p:inputText id="Pilot2Log" size="10" style="position: absolute; top: 159px; left: 280px;"/>
+                    <h:outputLabel for="Pilot2Log" value="Piloto 2" style="position: absolute; top: 178px; left: 280px;"/>
+                    <p:inputText id="Pilot2Log" size="10" style="position: absolute; top: 192px; left: 280px;"/>
                     <!--Voo solo-->
-                    <h:outputLabel for="SoloLog" value="Voo Solo" style="position: absolute; top: 165px; left: 413px;"/>
-                    <p:selectBooleanCheckbox id="SoloLog" style="position: absolute; top: 162px; left: 390px;"/>
+                    <h:outputLabel for="SoloLog" value="Voo Solo" style="position: absolute; top: 198px; left: 413px;"/>
+                    <p:selectBooleanCheckbox id="SoloLog" style="position: absolute; top: 195px; left: 390px;"/>
                     <!--4ª LINHA-->
                     <!--Observações-->
-                    <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 190px; left: 50px;"/>
-                    <p:inputText id="ObsLog" size="57" style="position: absolute; top: 204px; left: 50px;"/>
+                    <h:outputLabel for="ObsLog" value="Obs" style="position: absolute; top: 223px; left: 50px;"/>
+                    <p:inputText id="ObsLog" size="63" style="position: absolute; top: 237px; left: 50px;"/>
                     <!--Registro do diário verificado por-->
-                    <h:outputLabel for="VerifiedLog" value="Verificado Por" style="position: absolute; top: 190px; left: 700px;"/>
-                    <p:inputText id="VerifiedLog" size="11" style="position: absolute; top: 204px; left: 700px;"/>
+                    <h:outputLabel for="VerifiedLog" value="Verificado Por" style="position: absolute; top: 223px; left: 720px;"/>
+                    <p:inputText id="VerifiedLog" size="11" style="position: absolute; top: 237px; left: 720px;"/>
                 </p:fieldset>
                 <br/>
                 <!--ROD-->
-                <p:fieldset id="Rod" legend="ROD" style=" width: 750px; height: 125px;">
+                <p:fieldset id="Rod" legend="ROD" style=" width: 770px; height: 120px;">
                     <!--1ª LINHA-->
                     <!--Data do voo-->
-                    <h:outputLabel for="DateRod" value="Data" style="position: absolute; top: 287px; left: 50px;"/>
-                    <p:inputMask id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 301px; left: 50px;"/>
+                    <h:outputLabel for="DateRod" value="Data" style="position: absolute; top: 315px; left: 50px;"/>
+                    <p:inputMask id="DateRod" mask="99/99/9999" size="10" style="position: absolute; top: 329px; left: 50px;"/>
                     <!--Dados do relógio-->
-                    <p:fieldset id="TimeRod" legend="Relógio" style="position: absolute; top: 275px; left: 155px; width: 213px; height: 45px;">
+                    <p:fieldset id="TimeRod" legend="Relógio" style="position: absolute; top: 303px; left: 155px; width: 213px; height: 45px;">
                         <!--Horário da partida do motor-->
                         <h:outputLabel for="StartTimeRod" value="Partida" style="position: absolute; top: 10px; left: 10px;"/>
                         <p:inputText id="StartTimeRod" size="5" style="position: absolute; top: 24px; left: 10px;"/>
@@ -116,7 +116,7 @@
                         <p:inputText id="TotalTimeRod" size="5" style="position: absolute; top: 24px; left: 160px;"/>
                     </p:fieldset>
                     <!--Dados do tacômetro-->
-                    <p:fieldset id="TacRod" legend="Tac" style="position: absolute; top: 275px; left: 407px; width: 213px; height: 45px;">
+                    <p:fieldset id="TacRod" legend="Tac" style="position: absolute; top: 303px; left: 407px; width: 213px; height: 45px;">
                         <!--Tac na partida do motor-->
                         <h:outputLabel for="StartTacRod" value="Partida" style="position: absolute; top: 10px; left: 10px;"/>
                         <p:inputText id="StartTacRod" size="5" style="position: absolute; top: 24px; left: 10px;"/>
@@ -128,24 +128,24 @@
                         <p:inputText id="TotalTacRod" size="5" style="position: absolute; top: 24px; left: 160px;"/>
                     </p:fieldset>
                     <!--Pousos-->
-                    <h:outputLabel for="LandingsRod" value="Pousos" style="position: absolute; top: 287px; left: 660px;"/>
-                    <p:inputText id="LandingsRod" size="2" style="position: absolute; top: 301px; left: 660px;"/>
+                    <h:outputLabel for="LandingsRod" value="Pousos" style="position: absolute; top: 315px; left: 660px;"/>
+                    <p:inputText id="LandingsRod" size="2" style="position: absolute; top: 329px; left: 660px;"/>
                     <!--Natureza-->
-                    <h:outputLabel for="NatRod" value="Nat" style="position: absolute; top: 287px; left: 720px;"/>
-                    <p:inputText id="NatRod" size="2" style="position: absolute; top: 301px; left: 720px;"/>
+                    <h:outputLabel for="NatRod" value="Nat" style="position: absolute; top: 315px; left: 720px;"/>
+                    <p:inputText id="NatRod" size="2" style="position: absolute; top: 329px; left: 720px;"/>
                     <!--2ª LINHA-->
                     <!--Piloto 1-->
-                    <h:outputLabel for="Pilot1Rod" value="Piloto 1" style="position: absolute; top: 345px; left: 50px;"/>
-                    <p:inputText id="Pilot1Rod" size="10" style="position: absolute; top: 359px; left: 50px;"/>
+                    <h:outputLabel for="Pilot1Rod" value="Piloto 1" style="position: absolute; top: 373px; left: 50px;"/>
+                    <p:inputText id="Pilot1Rod" size="10" style="position: absolute; top: 387px; left: 50px;"/>
                     <!--Piloto 2-->
-                    <h:outputLabel for="Pilot2Rod" value="Piloto 2" style="position: absolute; top: 345px; left: 155px;"/>
-                    <p:inputText id="Pilot2Rod" size="10" style="position: absolute; top: 359px; left: 155px;"/>
+                    <h:outputLabel for="Pilot2Rod" value="Piloto 2" style="position: absolute; top: 373px; left: 155px;"/>
+                    <p:inputText id="Pilot2Rod" size="10" style="position: absolute; top: 387px; left: 155px;"/>
                     <!--Observações-->
-                    <h:outputLabel for="ObsRod" value="Obs" style="position: absolute; top: 345px; left: 260px;"/>
-                    <p:inputText id="ObsRod" size="59" style="position: absolute; top: 359px; left: 260px;"/>
+                    <h:outputLabel for="ObsRod" value="Obs" style="position: absolute; top: 373px; left: 260px;"/>
+                    <p:inputText id="ObsRod" size="59" style="position: absolute; top: 387px; left: 260px;"/>
                     <!--Registro do ROD verificado por-->
-                    <h:outputLabel for="VerifiedRod" value="Verificado Por" style="position: absolute; top: 345px; left: 700px;"/>
-                    <p:inputText id="VerifiedRod" size="11" style="position: absolute; top: 359px; left: 700px;"/>
+                    <h:outputLabel for="VerifiedRod" value="Verificado Por" style="position: absolute; top: 373px; left: 720px;"/>
+                    <p:inputText id="VerifiedRod" size="11" style="position: absolute; top: 387px; left: 720px;"/>
                 </p:fieldset>
                 <br/>
             </p:fieldset>
