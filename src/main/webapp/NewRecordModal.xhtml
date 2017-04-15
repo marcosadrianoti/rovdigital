@@ -104,15 +104,15 @@
                 <p:autoComplete id="VerifiedLogModal" dropdown="true" size="11" style="position: absolute; top: 246px; left: 675px;"/>
             </p:fieldset>
             <br/>
-            <!--Dados vindos dos ROD-->
-            <p:fieldset id="RModal" legend="ROD" style="width: 678px;
-                                                        height: 140px;
+            <!--Dados vindos do ROD-->
+            <p:fieldset id="RModal" legend="ROD" style="width: 780px;
+                                                        height: 143px;
                                                         background-color: #CCE7FF;">
                 <!--Data do voo-->
-                <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 304px; left: 25px;"/>
-                <p:calendar id="DateRodModal" mask="99/99/9999" size="10" style="position: absolute; top: 318px; left: 25px;"/>
+                <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 354px; left: 25px;"/>
+                <p:calendar id="DateRodModal" mask="99/99/9999" size="10" style="position: absolute; top: 368px; left: 25px;"/>
                 <!--Dados do relógio-->
-                <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 270px; left: 135px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 320px; left: 135px; width: 160px; height: 65px; background-color: #CCE7FF;">
                     <!--Horário inicial-->
                     <h:outputLabel for="StartTimeRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="StartTimeRodModal" size="2" style="position: absolute; top: 48px; left: 10px;" />
@@ -124,7 +124,7 @@
                     <p:inputText id="TotalTimeRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
                 </p:fieldset>
                 <!--Dados do tacômetro-->
-                <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 270px; left: 330px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 320px; left: 330px; width: 160px; height: 65px; background-color: #CCE7FF;">
                     <!--Tacômetro inicial-->
                     <h:outputLabel for="StartTacRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="StartTacRodModal" size="2" style="position: absolute; top: 48px; left: 10px;"/>
@@ -136,23 +136,23 @@
                     <p:inputText id="TotalTacRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
                 </p:fieldset>
                 <!--Número de pousos-->
-                <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 304px; left: 525px;"/>
-                <p:inputText id="LandingsRodModal" size="2" style="position: absolute; top: 318px; left: 525px;"/>
+                <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 354px; left: 525px;"/>
+                <p:inputText id="LandingsRodModal" size="2" style="position: absolute; top: 368px; left: 525px;"/>
                 <!--Natureza do voo-->
-                <p:outputLabel for="NatRodModal" value="Nat" style="position: absolute; top: 304px; left: 582px;"/>
-                <p:autoComplete id="NatRodModal" dropdown="true" size="2" style="position: absolute; top: 318px; left: 582px;"/>
+                <p:outputLabel for="NatRodModal" value="Nat" style="position: absolute; top: 354px; left: 582px;"/>
+                <p:autoComplete id="NatRodModal" dropdown="true" size="2" style="position: absolute; top: 368px; left: 582px;"/>
                 <!--Piloto 1 - Inva-->
-                <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 351px; left: 25px;"/>
-                <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" style="position: absolute; top: 365px; left: 25px;"/>
+                <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 405px; left: 25px;"/>
+                <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 25px;"/>
                 <!--Piloto 1 - Aluno-->
-                <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 351px; left: 160px;"/>
-                <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" style="position: absolute; top: 365px; left: 160px;"/>
+                <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 405px; left: 163px;"/>
+                <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 163px;"/>
                 <!--Observações-->
-                <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 351px; left: 295px;"/>
-                <p:inputText id="ObsRodModal" size="33" style="position: absolute; top: 365px; left: 295px;"/>
+                <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 405px; left: 302px;"/>
+                <p:inputText id="ObsRodModal" size="33" style="position: absolute; top: 419px; left: 302px;"/>
                 <!--Registro no Rod verificado por:-->
-                <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 351px; left: 560px;"/>
-                <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" style="position: absolute; top: 365px; left: 560px;"/>
+                <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 405px; left: 675px;"/>
+                <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 675px;"/>
             </p:fieldset>
             <!--Botões salvar e cancelar-->
             <table cellspacing="30" style="margin: -5px; padding: 0; width: 100%;">
