@@ -26,26 +26,26 @@
             <p:outputLabel value="Avião" for="AviaoModal" /><br/>
             <p:autoComplete id="AviaoModal" dropdown="true" size="4"/><br/><br/>
             <!--Dado vindos do Diário de bordo-->
-            <p:fieldset id="LBModal" legend="Diário" style="width: 780px;
+            <p:fieldset id="LBModal" legend="Diário" style="width: 790px;
                                                             height: 200px;
                                                             background-color: #CCE7FF;">
                 <!--Número do Diário-->
-                <h:outputLabel for="NumberModal" value="Número" style="position: absolute; top: 98px; left: 25px"/>
-                <p:inputText  id="NumberModal"  size="10" style="position: absolute; top: 112px; left: 25px;"/>
+                <h:outputLabel for="NumberModal" value="Número" style="position: absolute; top: 98px; left: 35px"/>
+                <p:inputText  id="NumberModal"  size="10" style="position: absolute; top: 112px; left: 35px;"/>
                 <!--Página do Diário-->
-                <h:outputLabel for="PageModal" value="Página" style="position: absolute; top: 98px; left: 135px;"/>
-                <p:inputText id="PageModal" size="2" style="position: absolute; top: 112px; left: 135px;"/>
+                <h:outputLabel for="PageModal" value="Página" style="position: absolute; top: 98px; left: 145px;"/>
+                <p:inputText id="PageModal" size="2" style="position: absolute; top: 112px; left: 145px;"/>
                 <!--Data do voo-->
-                <h:outputLabel for="DateLogModal" value="Data" style="position: absolute; top: 140px; left: 25px;"/>
-                <p:calendar id="DateLogModal" mask="99/99/9999" size="10" style="position: absolute; top: 154px; left: 25px;"/>
+                <h:outputLabel for="DateLogModal" value="Data" style="position: absolute; top: 140px; left: 35px;"/>
+                <p:calendar id="DateLogModal" mask="99/99/9999" size="10" style="position: absolute; top: 154px; left: 35px;"/>
                 <!--De onde-->
-                <p:outputLabel for="FromModal" value="De" style="position: absolute; top: 140px; left: 135px;"/>
-                <p:autoComplete id="FromModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 135px;"/>
+                <p:outputLabel for="FromModal" value="De" style="position: absolute; top: 140px; left: 145px;"/>
+                <p:autoComplete id="FromModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 145px;"/>
                 <!--Para onde-->
-                <p:outputLabel for="ToModal" value="Para" style="position: absolute; top: 140px; left: 224px;"/>
-                <p:autoComplete id="ToModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 224px;"/>
+                <p:outputLabel for="ToModal" value="Para" style="position: absolute; top: 140px; left: 234px;"/>
+                <p:autoComplete id="ToModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 234px;"/>
                 <!--Horas-->
-                <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 105px; left: 311px; width: 350px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 105px; left: 321px; width: 350px; height: 65px; background-color: #CCE7FF;">
                     <!--Horário da partida do motor-->
                     <h:outputLabel for="StartTimeLogModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="StartTimeLogModal" size="2" style="position: absolute; top: 48px; left: 10px;"/>
@@ -68,12 +68,8 @@
                     <h:outputLabel for="IfrcTimeLogModal" value="IFR-C" style="position: absolute; top: 34px; left: 320px;"/>
                     <p:inputText id="IfrcTimeLogModal" size="1" style="position: absolute; top: 48px; left: 320px;"/>
                 </p:fieldset>
-                
-                
-                
-                
                 <!--Totais-->
-                <p:fieldset id="TotalLogModal" legend="Total" style="position: absolute; top: 105px; left: 695px; width: 88px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TotalLogModal" legend="Total" style="position: absolute; top: 105px; left: 705px; width: 88px; height: 65px; background-color: #CCE7FF;">
                     <!--Total relógio-->
                     <h:outputLabel for="TotalTimeLogModal" value="Relógio" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="TotalTimeLogModal" size="1" style="position: absolute; top: 48px; left: 10px;"/>
@@ -82,37 +78,37 @@
                     <p:inputText id="TotalTacLogModal" size="1" style="position: absolute; top: 48px; left: 60px;"/>
                 </p:fieldset>
                 <!--Pousos-->
-                <h:outputLabel for="LandingsLogModal" value="Pousos" style="position: absolute; top: 190px; left: 25px;"/>
-                <p:inputText id="LandingsLogModal" size="2" style="position: absolute; top: 204px; left: 25px;"/>
+                <h:outputLabel for="LandingsLogModal" value="Pousos" style="position: absolute; top: 190px; left: 35px;"/>
+                <p:inputText id="LandingsLogModal" size="2" style="position: absolute; top: 204px; left: 35px;"/>
                 <!--Natureza do voo-->
-                <p:outputLabel for="NatLogModal" value="Nat" style="position: absolute; top: 190px; left: 80px;"/>
-                <p:autoComplete id="NatLogModal" dropdown="true" size="2" style="position: absolute; top: 204px; left: 82px;"/>
+                <p:outputLabel for="NatLogModal" value="Nat" style="position: absolute; top: 190px; left: 90px;"/>
+                <p:autoComplete id="NatLogModal" dropdown="true" size="2" style="position: absolute; top: 204px; left: 92px;"/>
                 <!--Piloto 1 - Inva-->
-                <p:outputLabel for="Pilot1LogModal" value="Piloto 1" style="position: absolute; top: 190px; left: 165px;"/>
-                <p:autoComplete id="Pilot1LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 165px;"/>
+                <p:outputLabel for="Pilot1LogModal" value="Piloto 1" style="position: absolute; top: 190px; left: 175px;"/>
+                <p:autoComplete id="Pilot1LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 175px;"/>
                 <!--Piloto 2 - Aluno-->
-                <p:outputLabel for="Pilot2LogModal" value="Piloto 2" style="position: absolute; top: 190px; left: 303px;"/>
-                <p:autoComplete id="Pilot2LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 303px;"/>
+                <p:outputLabel for="Pilot2LogModal" value="Piloto 2" style="position: absolute; top: 190px; left: 313px;"/>
+                <p:autoComplete id="Pilot2LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 313px;"/>
                 <!--Voo solo-->
-                <h:outputLabel for="SoloModal" value="Voo Solo" style="position: absolute; top: 209px; left: 473px;"/>
-                <p:selectBooleanCheckbox id="SoloModal" style="position: absolute; top: 207px; left: 450px;"/>
+                <h:outputLabel for="SoloModal" value="Voo Solo" style="position: absolute; top: 209px; left: 483px;"/>
+                <p:selectBooleanCheckbox id="SoloModal" style="position: absolute; top: 207px; left: 460px;"/>
                 <!--Observações-->
-                <h:outputLabel for="ObsLogModal" value="Obs" style="position: absolute; top: 232px; left: 25px;"/>
-                <p:inputText id="ObsLogModal" size="32" style="position: absolute; top: 246px; left: 25px;"/>
+                <h:outputLabel for="ObsLogModal" value="Obs" style="position: absolute; top: 232px; left: 35px;"/>
+                <p:inputText id="ObsLogModal" size="32" style="position: absolute; top: 246px; left: 35px;"/>
                 <!--Registro no Diário verificado por:-->
-                <p:outputLabel value="Verificado Por" for="VerifiedLogModal" style="position: absolute; top: 232px; left: 675px;"/>
-                <p:autoComplete id="VerifiedLogModal" dropdown="true" size="11" style="position: absolute; top: 246px; left: 675px;"/>
+                <p:outputLabel value="Verificado Por" for="VerifiedLogModal" style="position: absolute; top: 232px; left: 685px;"/>
+                <p:autoComplete id="VerifiedLogModal" dropdown="true" size="11" style="position: absolute; top: 246px; left: 685px;"/>
             </p:fieldset>
             <br/>
             <!--Dados vindos do ROD-->
-            <p:fieldset id="RModal" legend="ROD" style="width: 780px;
+            <p:fieldset id="RModal" legend="ROD" style="width: 790px;
                                                         height: 143px;
                                                         background-color: #CCE7FF;">
                 <!--Data do voo-->
-                <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 354px; left: 25px;"/>
-                <p:calendar id="DateRodModal" mask="99/99/9999" size="10" style="position: absolute; top: 368px; left: 25px;"/>
+                <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 354px; left: 35px;"/>
+                <p:calendar id="DateRodModal" mask="99/99/9999" size="10" style="position: absolute; top: 368px; left: 35px;"/>
                 <!--Dados do relógio-->
-                <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 320px; left: 135px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 320px; left: 145px; width: 160px; height: 65px; background-color: #CCE7FF;">
                     <!--Horário inicial-->
                     <h:outputLabel for="StartTimeRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="StartTimeRodModal" size="2" style="position: absolute; top: 48px; left: 10px;" />
@@ -124,7 +120,7 @@
                     <p:inputText id="TotalTimeRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
                 </p:fieldset>
                 <!--Dados do tacômetro-->
-                <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 320px; left: 330px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 320px; left: 340px; width: 160px; height: 65px; background-color: #CCE7FF;">
                     <!--Tacômetro inicial-->
                     <h:outputLabel for="StartTacRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
                     <p:inputText id="StartTacRodModal" size="2" style="position: absolute; top: 48px; left: 10px;"/>
@@ -136,23 +132,23 @@
                     <p:inputText id="TotalTacRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
                 </p:fieldset>
                 <!--Número de pousos-->
-                <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 354px; left: 525px;"/>
-                <p:inputText id="LandingsRodModal" size="2" style="position: absolute; top: 368px; left: 525px;"/>
+                <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 354px; left: 535px;"/>
+                <p:inputText id="LandingsRodModal" size="2" style="position: absolute; top: 368px; left: 535px;"/>
                 <!--Natureza do voo-->
-                <p:outputLabel for="NatRodModal" value="Nat" style="position: absolute; top: 354px; left: 582px;"/>
-                <p:autoComplete id="NatRodModal" dropdown="true" size="2" style="position: absolute; top: 368px; left: 582px;"/>
+                <p:outputLabel for="NatRodModal" value="Nat" style="position: absolute; top: 354px; left: 592px;"/>
+                <p:autoComplete id="NatRodModal" dropdown="true" size="2" style="position: absolute; top: 368px; left: 592px;"/>
                 <!--Piloto 1 - Inva-->
-                <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 405px; left: 25px;"/>
-                <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 25px;"/>
+                <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 405px; left: 35px;"/>
+                <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 35px;"/>
                 <!--Piloto 1 - Aluno-->
-                <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 405px; left: 163px;"/>
-                <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 163px;"/>
+                <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 405px; left: 173px;"/>
+                <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 173px;"/>
                 <!--Observações-->
-                <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 405px; left: 302px;"/>
-                <p:inputText id="ObsRodModal" size="33" style="position: absolute; top: 419px; left: 302px;"/>
+                <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 405px; left: 312px;"/>
+                <p:inputText id="ObsRodModal" size="33" style="position: absolute; top: 419px; left: 312px;"/>
                 <!--Registro no Rod verificado por:-->
-                <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 405px; left: 675px;"/>
-                <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 675px;"/>
+                <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 405px; left: 685px;"/>
+                <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 685px;"/>
             </p:fieldset>
             <!--Botões salvar e cancelar-->
             <table cellspacing="30" style="margin: -5px; padding: 0; width: 100%;">

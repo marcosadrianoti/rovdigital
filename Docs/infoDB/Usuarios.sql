@@ -1,0 +1,2 @@
+﻿INSERT INTO USERS (Name, Password, Conected, Access_Reports, Access_Pilots, Access_Aircrafts, Access_Instructors, Access_Airports, Access_Flights, Access_Classes, Access_Users, Access_Maintenances) VALUES ('Marcos Adriano','123','0','1','1','1','1','1','1','1','1','1');
+INSERT INTO USERS (Name, Password, Conected, Access_Reports, Access_Pilots, Access_Aircrafts, Access_Instructors, Access_Airports, Access_Flights, Access_Classes, Access_Users, Access_Maintenances) VALUES ('João Pedro','123','0','1','1','1','1','1','1','1','1','1');
