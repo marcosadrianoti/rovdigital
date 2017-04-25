@@ -1,7 +1,7 @@
 package br.com.ciacpla.rovdigital.entity;
 
 public class User {
-    private int user;
+    private int id;
     private String userName;
     private String userPassword;
     private boolean conected;
@@ -15,12 +15,12 @@ public class User {
     private boolean accessUsers;
     private boolean accessMaintenances;
 
-    public int getUser() {
-        return user;
+    public int getId() {
+        return id;
     }
 
-    public void setUser(int user) {
-        this.user = user;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUserName() {
