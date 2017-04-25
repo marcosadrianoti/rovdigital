@@ -13,154 +13,156 @@
         <!--<link rel="stylesheet" type="text/css" href="css/modal.css?version=12"/>-->
     </h:head>
     <h:body>
-        <div id="divRecordModal" style="margin-top: -5px;
-                                        margin-bottom: -5px;
-                                        margin-left: -10px;
-                                        margin-right: -10px;
-                                        padding: 10px;
-                                        background-color: #CCE7FF;
-                                        font-size: 12px;
-                                        font-family: Arial;
-                                        font-weight: normal;">
-            <!--Registro de qual Avião?-->
-            <p:outputLabel value="Avião" for="AviaoModal" /><br/>
-            <p:autoComplete id="AviaoModal" dropdown="true" size="4"/><br/><br/>
-            <!--Dado vindos do Diário de bordo-->
-            <p:fieldset id="LBModal" legend="Diário" style="width: 790px;
-                                                            height: 200px;
+        <h:form>
+            <div id="divRecordModal" style="margin-top: -5px;
+                                            margin-bottom: -5px;
+                                            margin-left: -10px;
+                                            margin-right: -10px;
+                                            padding: 10px;
+                                            background-color: #CCE7FF;
+                                            font-size: 12px;
+                                            font-family: Arial;
+                                            font-weight: normal;">
+                <!--Registro de qual Avião?-->
+                <p:outputLabel value="Avião" for="AviaoModal" /><br/>
+                <p:autoComplete id="AviaoModal" dropdown="true" size="4"/><br/><br/>
+                <!--Dado vindos do Diário de bordo-->
+                <p:fieldset id="LBModal" legend="Diário" style="width: 790px;
+                                                                height: 200px;
+                                                                background-color: #CCE7FF;">
+                    <!--Número do Diário-->
+                    <h:outputLabel for="NumberModal" value="Número" style="position: absolute; top: 98px; left: 35px"/>
+                    <p:inputText  id="NumberModal"  size="10" value="#{flightRecordBean.lbRecord.logbook.numberLogbook}" style="position: absolute; top: 112px; left: 35px;"/>
+                    <!--Página do Diário-->
+                    <h:outputLabel for="PageModal" value="Página" style="position: absolute; top: 98px; left: 145px;"/>
+                    <p:inputText id="PageModal" size="2" value="#{flightRecordBean.lbRecord.pageLogbook}" style="position: absolute; top: 112px; left: 145px;"/>
+                    <!--Data do voo-->
+                    <h:outputLabel for="DateLogModal" value="Data" style="position: absolute; top: 140px; left: 35px;"/>
+                    <p:calendar id="DateLogModal" mask="99/99/9999" size="10" value="#{flightRecordBean.lbRecord.date}" style="position: absolute; top: 154px; left: 35px;"/>
+                    <!--De onde-->
+                    <p:outputLabel for="FromModal" value="De" style="position: absolute; top: 140px; left: 145px;"/>
+                    <p:autoComplete id="FromModal" dropdown="true" size="3" value="#{flightRecordBean.lbRecord.from}" style="position: absolute; top: 154px; left: 145px;"/>
+                    <!--Para onde-->
+                    <p:outputLabel for="ToModal" value="Para" style="position: absolute; top: 140px; left: 234px;"/>
+                    <p:autoComplete id="ToModal" dropdown="true" size="3" value="#{flightRecordBean.lbRecord.to}" style="position: absolute; top: 154px; left: 234px;"/>
+                    <!--Horas-->
+                    <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 105px; left: 321px; width: 350px; height: 65px; background-color: #CCE7FF;">
+                        <!--Horário da partida do motor-->
+                        <h:outputLabel for="StartTimeLogModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
+                        <p:inputText id="StartTimeLogModal" size="2" value="#{flightRecordBean.lbRecord.startTime}" style="position: absolute; top: 48px; left: 10px;"/>
+                        <!--Horário do corte do motor-->
+                        <h:outputLabel for="FinalTimeLogModal" value="Corte" style="position: absolute; top: 34px; left: 65px;"/>
+                        <p:inputText id="FinalTimeLogModal" size="2" value="#{flightRecordBean.lbRecord.finalTime}" style="position: absolute; top: 48px; left: 65px;"/>
+                        <!--Diúrno-->
+                        <h:outputLabel for="DayTimeLogModal" value="Diúrno" style="position: absolute; top: 34px; left: 120px;"/>
+                        <p:inputText id="DayTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.dayTime}" style="position: absolute; top: 48px; left: 120px;"/>
+                        <!--Noturno-->
+                        <h:outputLabel for="NigthTimeLogModal" value="Noturno" style="position: absolute; top: 34px; left: 170px;"/>
+                        <p:inputText id="NigthTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.nigthTime}" style="position: absolute; top: 48px; left: 170px;"/>
+                        <!--VFR-->
+                        <h:outputLabel for="VfrTimeLogModal" value="VFR" style="position: absolute; top: 34px; left: 220px;"/>
+                        <p:inputText id="VfrTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.vfrTime}" style="position: absolute; top: 48px; left: 220px;"/>
+                        <!--IFR-R-->
+                        <h:outputLabel for="IfrrTimeLogModal" value="IFR-R" style="position: absolute; top: 34px; left: 270px;"/>
+                        <p:inputText id="IfrrTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.ifrrTime}" style="position: absolute; top: 48px; left: 270px;"/>
+                        <!--IFR-C-->
+                        <h:outputLabel for="IfrcTimeLogModal" value="IFR-C" style="position: absolute; top: 34px; left: 320px;"/>
+                        <p:inputText id="IfrcTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.ifrcTime}" style="position: absolute; top: 48px; left: 320px;"/>
+                    </p:fieldset>
+                    <!--Totais-->
+                    <p:fieldset id="TotalLogModal" legend="Total" style="position: absolute; top: 105px; left: 705px; width: 88px; height: 65px; background-color: #CCE7FF;">
+                        <!--Total relógio-->
+                        <h:outputLabel for="TotalTimeLogModal" value="Relógio" style="position: absolute; top: 34px; left: 10px;"/>
+                        <p:inputText id="TotalTimeLogModal" size="1" value="#{flightRecordBean.lbRecord.totalTime}" style="position: absolute; top: 48px; left: 10px;"/>
+                        <!--Total tacômetro-->
+                        <h:outputLabel for="TotalTacLogModal" value="Tac" style="position: absolute; top: 34px; left: 60px;"/>
+                        <p:inputText id="TotalTacLogModal" size="1" value="#{flightRecordBean.lbRecord.totalTac}" style="position: absolute; top: 48px; left: 60px;"/>
+                    </p:fieldset>
+                    <!--Pousos-->
+                    <h:outputLabel for="LandingsLogModal" value="Pousos" style="position: absolute; top: 190px; left: 35px;"/>
+                    <p:inputText id="LandingsLogModal" size="2" value="#{flightRecordBean.lbRecord.landings}" style="position: absolute; top: 204px; left: 35px;"/>
+                    <!--Natureza do voo-->
+                    <p:outputLabel for="NatLogModal" value="Nat" style="position: absolute; top: 190px; left: 90px;"/>
+                    <p:autoComplete id="NatLogModal" dropdown="true" size="2" value="#{flightRecordBean.lbRecord.nat}" style="position: absolute; top: 204px; left: 92px;"/>
+                    <!--Piloto 1 - Inva-->
+                    <p:outputLabel for="Pilot1LogModal" value="Piloto 1" style="position: absolute; top: 190px; left: 175px;"/>
+                    <p:autoComplete id="Pilot1LogModal" dropdown="true" size="10" value="#{flightRecordBean.lbRecord.pilot1}" style="position: absolute; top: 204px; left: 175px;"/>
+                    <!--Piloto 2 - Aluno-->
+                    <p:outputLabel for="Pilot2LogModal" value="Piloto 2" style="position: absolute; top: 190px; left: 313px;"/>
+                    <p:autoComplete id="Pilot2LogModal" dropdown="true" size="10" value="#{flightRecordBean.lbRecord.pilot2}" style="position: absolute; top: 204px; left: 313px;"/>
+                    <!--Voo solo-->
+                    <h:outputLabel for="SoloModal" value="Voo Solo" style="position: absolute; top: 209px; left: 483px;"/>
+                    <p:selectBooleanCheckbox id="SoloModal" value="#{flightRecordBean.lbRecord.solo}" style="position: absolute; top: 207px; left: 460px;"/>
+                    <!--Observações-->
+                    <h:outputLabel for="ObsLogModal" value="Obs" style="position: absolute; top: 232px; left: 35px;"/>
+                    <p:inputText id="ObsLogModal" size="32" value="#{flightRecordBean.lbRecord.obs}" style="position: absolute; top: 246px; left: 35px;"/>
+                    <!--Registro no Diário verificado por:-->
+                    <p:outputLabel value="Verificado Por" for="VerifiedLogModal" style="position: absolute; top: 232px; left: 685px;"/>
+                    <p:autoComplete id="VerifiedLogModal" dropdown="true" size="11" value="#{flightRecordBean.lbRecord.crossChecked}" style="position: absolute; top: 246px; left: 685px;"/>
+                </p:fieldset>
+                <br/>
+                <!--Dados vindos do ROD-->
+                <p:fieldset id="RModal" legend="ROD" style="width: 790px;
+                                                            height: 143px;
                                                             background-color: #CCE7FF;">
-                <!--Número do Diário-->
-                <h:outputLabel for="NumberModal" value="Número" style="position: absolute; top: 98px; left: 35px"/>
-                <p:inputText  id="NumberModal"  size="10" style="position: absolute; top: 112px; left: 35px;"/>
-                <!--Página do Diário-->
-                <h:outputLabel for="PageModal" value="Página" style="position: absolute; top: 98px; left: 145px;"/>
-                <p:inputText id="PageModal" size="2" style="position: absolute; top: 112px; left: 145px;"/>
-                <!--Data do voo-->
-                <h:outputLabel for="DateLogModal" value="Data" style="position: absolute; top: 140px; left: 35px;"/>
-                <p:calendar id="DateLogModal" mask="99/99/9999" size="10" style="position: absolute; top: 154px; left: 35px;"/>
-                <!--De onde-->
-                <p:outputLabel for="FromModal" value="De" style="position: absolute; top: 140px; left: 145px;"/>
-                <p:autoComplete id="FromModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 145px;"/>
-                <!--Para onde-->
-                <p:outputLabel for="ToModal" value="Para" style="position: absolute; top: 140px; left: 234px;"/>
-                <p:autoComplete id="ToModal" dropdown="true" size="3" style="position: absolute; top: 154px; left: 234px;"/>
-                <!--Horas-->
-                <p:fieldset id="TimeLog" legend="Horas" style="position: absolute; top: 105px; left: 321px; width: 350px; height: 65px; background-color: #CCE7FF;">
-                    <!--Horário da partida do motor-->
-                    <h:outputLabel for="StartTimeLogModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
-                    <p:inputText id="StartTimeLogModal" size="2" style="position: absolute; top: 48px; left: 10px;"/>
-                    <!--Horário do corte do motor-->
-                    <h:outputLabel for="FinalTimeLogModal" value="Corte" style="position: absolute; top: 34px; left: 65px;"/>
-                    <p:inputText id="FinalTimeLogModal" size="2" style="position: absolute; top: 48px; left: 65px;"/>
-                    <!--Diúrno-->
-                    <h:outputLabel for="DayTimeLogModal" value="Diúrno" style="position: absolute; top: 34px; left: 120px;"/>
-                    <p:inputText id="DayTimeLogModal" size="1" style="position: absolute; top: 48px; left: 120px;"/>
-                    <!--Noturno-->
-                    <h:outputLabel for="NigthTimeLogModal" value="Noturno" style="position: absolute; top: 34px; left: 170px;"/>
-                    <p:inputText id="NigthTimeLogModal" size="1" style="position: absolute; top: 48px; left: 170px;"/>
-                    <!--VFR-->
-                    <h:outputLabel for="VfrTimeLogModal" value="VFR" style="position: absolute; top: 34px; left: 220px;"/>
-                    <p:inputText id="VfrTimeLogModal" size="1" style="position: absolute; top: 48px; left: 220px;"/>
-                    <!--IFR-R-->
-                    <h:outputLabel for="IfrrTimeLogModal" value="IFR-R" style="position: absolute; top: 34px; left: 270px;"/>
-                    <p:inputText id="IfrrTimeLogModal" size="1" style="position: absolute; top: 48px; left: 270px;"/>
-                    <!--IFR-C-->
-                    <h:outputLabel for="IfrcTimeLogModal" value="IFR-C" style="position: absolute; top: 34px; left: 320px;"/>
-                    <p:inputText id="IfrcTimeLogModal" size="1" style="position: absolute; top: 48px; left: 320px;"/>
+                    <!--Data do voo-->
+                    <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 354px; left: 35px;"/>
+                    <p:calendar id="DateRodModal" mask="99/99/9999" size="10" value="#{flightRecordBean.rdRecord.date}" style="position: absolute; top: 368px; left: 35px;"/>
+                    <!--Dados do relógio-->
+                    <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 320px; left: 145px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                        <!--Horário inicial-->
+                        <h:outputLabel for="StartTimeRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
+                        <p:inputText id="StartTimeRodModal" size="2" value="#{flightRecordBean.rdRecord.startTime}" style="position: absolute; top: 48px; left: 10px;" />
+                        <!--Horário Final-->
+                        <h:outputLabel for="FinalTimeRodModal" value="Corte" style="position: absolute; top: 34px; left: 68px;"/>
+                        <p:inputText id="FinalTimeRodModal" size="2" value="#{flightRecordBean.rdRecord.finalTime}" style="position: absolute; top: 48px; left: 68px;"/>
+                        <!--Tempo total-->
+                        <h:outputLabel for="TotalTimeRodModal" value="Total" style="position: absolute; top: 34px; left: 126px;"/>
+                        <p:inputText id="TotalTimeRodModal" size="2" value="#{flightRecordBean.rdRecord.totalTime}" style="position: absolute; top: 48px; left: 126px;"/>
+                    </p:fieldset>
+                    <!--Dados do tacômetro-->
+                    <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 320px; left: 340px; width: 160px; height: 65px; background-color: #CCE7FF;">
+                        <!--Tacômetro inicial-->
+                        <h:outputLabel for="StartTacRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
+                        <p:inputText id="StartTacRodModal" size="2" value="#{flightRecordBean.rdRecord.startTac}" style="position: absolute; top: 48px; left: 10px;"/>
+                        <!--Tacômetro final-->
+                        <h:outputLabel for="FinalTacRodModal" value="Corte" style="position: absolute; top: 34px; left: 68px;"/>
+                        <p:inputText id="FinalTacRodModal" size="2" value="#{flightRecordBean.rdRecord.finalTac}" style="position: absolute; top: 48px; left: 68px;"/>
+                        <!--Tacômetro total-->
+                        <h:outputLabel for="TotalTacRodModal" value="Total" style="position: absolute; top: 34px; left: 126px;"/>
+                        <p:inputText id="TotalTacRodModal" size="2" value="#{flightRecordBean.rdRecord.totalTac}" style="position: absolute; top: 48px; left: 126px;"/>
+                    </p:fieldset>
+                    <!--Número de pousos-->
+                    <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 354px; left: 535px;"/>
+                    <p:inputText id="LandingsRodModal" size="2" value="#{flightRecordBean.rdRecord.landings}" style="position: absolute; top: 368px; left: 535px;"/>
+                    <!--Natureza do voo-->
+                    <p:outputLabel for="MissionRodModal" value="Missão" style="position: absolute; top: 354px; left: 592px;"/>
+                    <p:autoComplete id="MissionRodModal" dropdown="true" size="2" value="#{flightRecordBean.rdRecord.mission}" style="position: absolute; top: 368px; left: 592px;"/>
+                    <!--Piloto 1 - Inva-->
+                    <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 405px; left: 35px;"/>
+                    <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" value="#{flightRecordBean.rdRecord.pilot1}" style="position: absolute; top: 419px; left: 35px;"/>
+                    <!--Piloto 1 - Aluno-->
+                    <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 405px; left: 173px;"/>
+                    <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" value="#{flightRecordBean.rdRecord.pilot2}" style="position: absolute; top: 419px; left: 173px;"/>
+                    <!--Observações-->
+                    <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 405px; left: 312px;"/>
+                    <p:inputText id="ObsRodModal" size="33" value="#{flightRecordBean.rdRecord.obs}" style="position: absolute; top: 419px; left: 312px;"/>
+                    <!--Registro no Rod verificado por:-->
+                    <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 405px; left: 685px;"/>
+                    <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" value="#{flightRecordBean.rdRecord.crossChecked}" style="position: absolute; top: 419px; left: 685px;"/>
                 </p:fieldset>
-                <!--Totais-->
-                <p:fieldset id="TotalLogModal" legend="Total" style="position: absolute; top: 105px; left: 705px; width: 88px; height: 65px; background-color: #CCE7FF;">
-                    <!--Total relógio-->
-                    <h:outputLabel for="TotalTimeLogModal" value="Relógio" style="position: absolute; top: 34px; left: 10px;"/>
-                    <p:inputText id="TotalTimeLogModal" size="1" style="position: absolute; top: 48px; left: 10px;"/>
-                    <!--Total tacômetro-->
-                    <h:outputLabel for="TotalTacLogModal" value="Tac" style="position: absolute; top: 34px; left: 60px;"/>
-                    <p:inputText id="TotalTacLogModal" size="1" style="position: absolute; top: 48px; left: 60px;"/>
-                </p:fieldset>
-                <!--Pousos-->
-                <h:outputLabel for="LandingsLogModal" value="Pousos" style="position: absolute; top: 190px; left: 35px;"/>
-                <p:inputText id="LandingsLogModal" size="2" style="position: absolute; top: 204px; left: 35px;"/>
-                <!--Natureza do voo-->
-                <p:outputLabel for="NatLogModal" value="Nat" style="position: absolute; top: 190px; left: 90px;"/>
-                <p:autoComplete id="NatLogModal" dropdown="true" size="2" style="position: absolute; top: 204px; left: 92px;"/>
-                <!--Piloto 1 - Inva-->
-                <p:outputLabel for="Pilot1LogModal" value="Piloto 1" style="position: absolute; top: 190px; left: 175px;"/>
-                <p:autoComplete id="Pilot1LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 175px;"/>
-                <!--Piloto 2 - Aluno-->
-                <p:outputLabel for="Pilot2LogModal" value="Piloto 2" style="position: absolute; top: 190px; left: 313px;"/>
-                <p:autoComplete id="Pilot2LogModal" dropdown="true" size="10" style="position: absolute; top: 204px; left: 313px;"/>
-                <!--Voo solo-->
-                <h:outputLabel for="SoloModal" value="Voo Solo" style="position: absolute; top: 209px; left: 483px;"/>
-                <p:selectBooleanCheckbox id="SoloModal" style="position: absolute; top: 207px; left: 460px;"/>
-                <!--Observações-->
-                <h:outputLabel for="ObsLogModal" value="Obs" style="position: absolute; top: 232px; left: 35px;"/>
-                <p:inputText id="ObsLogModal" size="32" style="position: absolute; top: 246px; left: 35px;"/>
-                <!--Registro no Diário verificado por:-->
-                <p:outputLabel value="Verificado Por" for="VerifiedLogModal" style="position: absolute; top: 232px; left: 685px;"/>
-                <p:autoComplete id="VerifiedLogModal" dropdown="true" size="11" style="position: absolute; top: 246px; left: 685px;"/>
-            </p:fieldset>
-            <br/>
-            <!--Dados vindos do ROD-->
-            <p:fieldset id="RModal" legend="ROD" style="width: 790px;
-                                                        height: 143px;
-                                                        background-color: #CCE7FF;">
-                <!--Data do voo-->
-                <h:outputLabel for="DateRodModal" value="Data" style="position: absolute; top: 354px; left: 35px;"/>
-                <p:calendar id="DateRodModal" mask="99/99/9999" size="10" style="position: absolute; top: 368px; left: 35px;"/>
-                <!--Dados do relógio-->
-                <p:fieldset id="TimeRodModal" legend="Relógio" style="position: absolute; top: 320px; left: 145px; width: 160px; height: 65px; background-color: #CCE7FF;">
-                    <!--Horário inicial-->
-                    <h:outputLabel for="StartTimeRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
-                    <p:inputText id="StartTimeRodModal" size="2" style="position: absolute; top: 48px; left: 10px;" />
-                    <!--Horário Final-->
-                    <h:outputLabel for="FinalTimeRodModal" value="Corte" style="position: absolute; top: 34px; left: 68px;"/>
-                    <p:inputText id="FinalTimeRodModal" size="2" style="position: absolute; top: 48px; left: 68px;"/>
-                    <!--Tempo total-->
-                    <h:outputLabel for="TotalTimeRodModal" value="Total" style="position: absolute; top: 34px; left: 126px;"/>
-                    <p:inputText id="TotalTimeRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
-                </p:fieldset>
-                <!--Dados do tacômetro-->
-                <p:fieldset id="TacRodModal" legend="Tac" style="position: absolute; top: 320px; left: 340px; width: 160px; height: 65px; background-color: #CCE7FF;">
-                    <!--Tacômetro inicial-->
-                    <h:outputLabel for="StartTacRodModal" value="Partida" style="position: absolute; top: 34px; left: 10px;"/>
-                    <p:inputText id="StartTacRodModal" size="2" style="position: absolute; top: 48px; left: 10px;"/>
-                    <!--Tacômetro final-->
-                    <h:outputLabel for="FinalTacRodModal" value="Corte" style="position: absolute; top: 34px; left: 68px;"/>
-                    <p:inputText id="FinalTacRodModal" size="2" style="position: absolute; top: 48px; left: 68px;"/>
-                    <!--Tacômetro total-->
-                    <h:outputLabel for="TotalTacRodModal" value="Total" style="position: absolute; top: 34px; left: 126px;"/>
-                    <p:inputText id="TotalTacRodModal" size="2" style="position: absolute; top: 48px; left: 126px;"/>
-                </p:fieldset>
-                <!--Número de pousos-->
-                <h:outputLabel for="LandingsRodModal" value="Pousos" style="position: absolute; top: 354px; left: 535px;"/>
-                <p:inputText id="LandingsRodModal" size="2" style="position: absolute; top: 368px; left: 535px;"/>
-                <!--Natureza do voo-->
-                <p:outputLabel for="NatRodModal" value="Nat" style="position: absolute; top: 354px; left: 592px;"/>
-                <p:autoComplete id="NatRodModal" dropdown="true" size="2" style="position: absolute; top: 368px; left: 592px;"/>
-                <!--Piloto 1 - Inva-->
-                <p:outputLabel for="Pilot1RodModal" value="Piloto 1" style="position: absolute; top: 405px; left: 35px;"/>
-                <p:autoComplete id="Pilot1RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 35px;"/>
-                <!--Piloto 1 - Aluno-->
-                <p:outputLabel for="Pilot2RodModal" value="Piloto 2" style="position: absolute; top: 405px; left: 173px;"/>
-                <p:autoComplete id="Pilot2RodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 173px;"/>
-                <!--Observações-->
-                <h:outputLabel for="ObsRodModal" value="Obs" style="position: absolute; top: 405px; left: 312px;"/>
-                <p:inputText id="ObsRodModal" size="33" style="position: absolute; top: 419px; left: 312px;"/>
-                <!--Registro no Rod verificado por:-->
-                <p:outputLabel for="VerifiedRodModal" value="Verificado Por" style="position: absolute; top: 405px; left: 685px;"/>
-                <p:autoComplete id="VerifiedRodModal" dropdown="true" size="10" style="position: absolute; top: 419px; left: 685px;"/>
-            </p:fieldset>
-            <!--Botões salvar e cancelar-->
-            <table cellspacing="30" style="margin: -5px; padding: 0; width: 100%;">
-                <tr>
-                    <td style="text-align: right;">
-                        <p:commandButton id="SaveModal" value="Salvar" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
-                    </td>
-                    <td>
-                        <p:commandButton id="CancelModal" value="Cancelar" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
-                    </td>
-                </tr>
-            </table>
-        </div>
+                <!--Botões salvar e cancelar-->
+                <table cellspacing="30" style="margin: -5px; padding: 0; width: 100%;">
+                    <tr>
+                        <td style="text-align: right;">
+                            <p:commandButton id="SaveModal" value="Salvar" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                        </td>
+                        <td>
+                            <p:commandButton id="CancelModal" value="Cancelar" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </h:form>
     </h:body>
 </html>

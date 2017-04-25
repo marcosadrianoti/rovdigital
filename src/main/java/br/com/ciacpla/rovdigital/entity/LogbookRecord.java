@@ -12,6 +12,7 @@ public class LogbookRecord extends FlightRecord{
     private float vfrTime;
     private float ifrrTime;
     private float ifrcTime;
+    private boolean solo;
     private String nat;
 
     public int getId() {
@@ -100,6 +101,14 @@ public class LogbookRecord extends FlightRecord{
 
     public void setIfrcTime(float ifrcTime) {
         this.ifrcTime = ifrcTime;
+    }
+
+    public boolean isSolo() {
+        return solo;
+    }
+
+    public void setSolo(boolean solo) {
+        this.solo = solo;
     }
 
     public String getNat() {
