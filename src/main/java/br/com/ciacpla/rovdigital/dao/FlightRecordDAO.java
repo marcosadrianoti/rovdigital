@@ -2,7 +2,8 @@ package br.com.ciacpla.rovdigital.dao;
 
 import br.com.ciacpla.rovdigital.entity.LogbookRecord;
 import br.com.ciacpla.rovdigital.entity.RodRecord;
-import br.com.ciacpla.rovdigital.util.ConnectionFactory;
+import br.com.ciacpla.rovdigital.util.ConnectionFabrica;
+import br.com.ciacpla.rovdigital.util.ErroSistema;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -14,9 +15,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class FlightRecordDAO {
-    public void salvar(LogbookRecord lbr, RodRecord rr){
+    public void salvar(LogbookRecord lbr, RodRecord rr) throws ErroSistema{
         try {
-            Connection conexao = ConnectionFactory.getConexao();
+            Connection conexao = ConnectionFabrica.getConexao();
             int lastIdRod = 0;
 //            Dados do ROD
             String sqlRod;

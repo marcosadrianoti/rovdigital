@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    >
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--<link rel="stylesheet" type="text/css" href="css/modal.css?version=12"/>-->
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:messages autoUpdate="true" showDetail="true"></p:messages>
+            <div id="divAirportModal" style="width: 280px;
+                                            height: 120px;  
+                                            margin-top: -5px;
+                                            margin-bottom: -5px;
+                                            margin-left: -10px;
+                                            margin-right: -10px;
+                                            padding: 10px;
+                                            background-color: #CCE7FF;
+                                            font-size: 12px;
+                                            font-family: Arial;
+                                            font-weight: normal;">
+                
+                
+            <!--Dados do relógio-->
+                <p:fieldset id="AirportModal"  style="position: absolute; top: 20px; left: 10px; width: 259px; height: 35px; background-color: #CCE7FF;">
+                    <!--Horário inicial-->
+                    <h:outputLabel for="IcaoCode" value="Código" style="position: absolute; top: 4px; left: 10px;"/>
+                    <p:inputText id="IcaoCode" size="2" value="#{airportBean.airport.icaoCode}" style="position: absolute; top: 18px; left: 10px;" />
+                    <!--Horário Final-->
+                    <h:outputLabel for="City" value="Cidade" style="position: absolute; top: 4px; left: 68px;"/>
+                    <p:inputText id="City" size="16" value="#{airportBean.airport.city}" style="position: absolute; top: 18px; left: 68px;"/>
+                    <!--Tempo total-->
+                    <h:outputLabel for="State" value="Estado" style="position: absolute; top: 4px; left: 224px;"/>
+                    <p:inputText id="State" size="2" value="#{airportBean.airport.state.id}" style="position: absolute; top: 18px; left: 224px;"/>
+                </p:fieldset>
+            <!--Botões salvar e cancelar-->
+                <table cellspacing="30" style="position: absolute; top: 60px; margin: -5px; padding: 0; width: 90%;">
+                    <tr>
+                        <td style="text-align: right;">
+                            <p:commandButton id="SaveModal" value="Salvar" actionListener ="#{airportBean.adicionar()}" process="@this"/>
+                        </td>
+                        <td>
+                            <p:commandButton id="CancelModal" value="Cancelar" styleClass="ui-priority-primary" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </h:form>
+    </h:body>
+</html>
