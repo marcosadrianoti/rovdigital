@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFabrica {
     private static Connection conexao;
-    private static final String URL_CONNECTION = "jdbc:postgresql://localhost/rovdb";
+    private static final String URL_CONNECTION = "jdbc:postgresql://localhost:5432/rovdb";
     private static final String USER = "postgres";
     private static final String PSW = "postgres";
     

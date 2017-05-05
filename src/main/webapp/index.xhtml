@@ -31,7 +31,7 @@
                 <p align="center" style="margin: 0;"><font face="Arial" size="4"><strong>MENU</strong></font></p>
                 <p:menu class="ui-menu" toggleable="true"> 
                     <p:submenu class="ui-menubar" label="Registros de Voo">
-                        <p:menuitem class="ui-menu-child" value="Novo" onclick="PF('dlgNewRecord').show();" />
+                        <p:menuitem class="ui-menu-child" value="Novo"  />
                         <p:menuitem class="ui-menu-child" value="Listar" actionListener="#{swapContentBean.setName('ViewAllRecords.xhtml')}" update="panelmain" />
                         <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
@@ -59,7 +59,7 @@
                         <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                
                     </p:submenu>
                     <p:submenu class="ui-menubar" label="Aeródromos">
-                        <p:menuitem class="ui-menu-child" value="Novo" onclick="PF('dlgNewAirport').show();" />
+                        <p:menuitem class="ui-menu-child" value="Novo"  actionListener="#{menuView.save}"/>
                         <p:menuitem class="ui-menu-child" value="Listar" actionListener="#{swapContentBean.setName('ViewAllAirports.xhtml')}" update="panelmain" />
                         <p:menuitem class="ui-menu-child" value="Editar" actionListener="#{menuView.save}" />
                         <p:menuitem class="ui-menu-child" value="Apagar" actionListener="#{menuView.save}" />
@@ -82,15 +82,15 @@
                         <p:menuitem class="ui-menu-child" value="Procurar" actionListener="#{menuView.save}" />                 
                     </p:submenu>
                 </p:menu>
-                <p:dialog header="Registro de Voo" widgetVar="dlgNewRecord" modal="true" resizable="false">
+<!--                <p:dialog header="Registro de Voo" widgetVar="dlgNewRecord" modal="true" resizable="false">
                     <ui:include src="NewRecordModal.xhtml"/>
                 </p:dialog>
                 <p:dialog header="Aeródromo" widgetVar="dlgNewAirport" modal="true" resizable="false">
                     <ui:include src="NewAirportModal.xhtml"/>
-                </p:dialog>
+                </p:dialog>-->
             </h:form>
         </div>
-        <!-- Div central que vai mostrar os vários conteúdos-->
+        <!-- Div central que vai mostrar os vários conteúdos  onclick="PF('dlgNewAirport').show();"  -->
         <div id="content">
             <p:panel id="panelmain" style="border:none">
                 <ui:include src="#{swapContentBean.name}"/>
